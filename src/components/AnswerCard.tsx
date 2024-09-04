@@ -172,7 +172,7 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
             <button
               key={char}
               onClick={() => handleAnswer(char)}
-              className="border-2 rounded-full w-12 h-12 flex justify-center items-center"
+              className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
             >
               {char}
             </button>
@@ -180,13 +180,13 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
         )}
         <button
           onClick={() => handleAnswer("Backspace")}
-          className="border-2 rounded-full w-12 h-12 flex justify-center items-center"
+          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
         >
           ⌫
         </button>
         <button
           onClick={() => setAnswer("")}
-          className="border-2 rounded-full w-12 h-12 flex justify-center items-center"
+          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
         >
           <Trash2Icon />
         </button>
