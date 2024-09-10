@@ -60,7 +60,6 @@ export default function AnswerCard({ data, className }: Props) {
   useEffect(() => {
     setHintModalContent(undefined, "Hint", data.hintText, "Close");
     setIsHintUsed(false);
-    console.log("sheesh");
   }, [data.hintText, setHintModalContent]);
 
   return (
@@ -276,7 +275,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
         ).map((_, index) => (
           <span
             key={index}
-            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold"
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
           >
             {answer?.toString().charAt(index) || ""}
           </span>
@@ -288,7 +287,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
           <button
             key={num}
             onClick={() => handleAnswer(num.toString())}
-            className="border-2 rounded-full w-14 h-14 flex justify-center items-center text-2xl"
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
           >
             {num}
           </button>
