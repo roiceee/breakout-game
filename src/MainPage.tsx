@@ -61,7 +61,7 @@ export default function MainPage() {
 
       <div className="w-full px-2 md:px-4 lg:px-8">
         {currentRound === 0 && (
-          <div className="card bg-primary text-primary-content min-w-[300px] max-w-[600px] mx-auto absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="card bg-primary text-primary-content min-w-[300px] max-w-[600px] mx-auto md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
             <div className="card-body">
               <h2 className="card-title mx-auto">Breakout Game</h2>
               <p>
@@ -95,7 +95,7 @@ export default function MainPage() {
         )}
         {currentRound == rounds + 1 && (
           //thank you page
-          <div className="card bg-primary text-primary-content min-w-[300px] max-w-[600px] absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="card bg-primary text-primary-content min-w-[300px] max-w-[600px] md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
             <div className="card-body">
               <div>
                 <Trophy size={100} className="mx-auto" />
