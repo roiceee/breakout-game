@@ -1,12 +1,12 @@
+import { Lightbulb, TimerReset, Trophy } from "lucide-react";
 import { useCallback, useContext, useEffect } from "react";
 import roundsData from "./assets/rounds";
 import Navbar from "./components/Navbar";
 import RoundPage from "./components/RoundPage";
+import HintContext from "./context/hint-context";
 import RoundContext from "./context/round-context";
 import TimerContext from "./context/timer-context";
 import useModal from "./hooks/useModal";
-import HintContext from "./context/hint-context";
-import { Lightbulb, TimerReset, Trophy } from "lucide-react";
 import { convertSecondsToSecondsMinutes } from "./utils/timer";
 
 export default function MainPage() {
@@ -28,18 +28,21 @@ export default function MainPage() {
   const play = useCallback(() => {
     startTimer();
     setCurrentRound(currentRound + 1);
+    new Audio("/start.wav").play();
   }, [currentRound, setCurrentRound, startTimer]);
 
   //game over
   useEffect(() => {
     if (secondsRemaining === 0) {
       openGameOverModal();
+      new Audio("/lose.wav").play();
     }
   }, [secondsRemaining, openGameOverModal]);
 
   //game finished
   useEffect(() => {
     if (currentRound === rounds + 1) {
+      new Audio("/win.wav").play();
       stopTimer();
     }
   }, [currentRound, rounds, stopTimer]);

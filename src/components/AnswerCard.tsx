@@ -36,8 +36,10 @@ export default function AnswerCard({ data, className }: Props) {
   const onSubmit = (answer: any, correctAnswer: any): boolean => {
     if (answer === correctAnswer) {
       openModal();
+      new Audio("/correct.mp3").play();
       return true;
     } else {
+      new Audio("/error.mp3").play();
       return false;
     }
   };

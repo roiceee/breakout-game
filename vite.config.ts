@@ -15,6 +15,11 @@ export default defineConfig({
         "icon-512.png",
         "pattern.webp",
         "robots.txt",
+        "win.wav",
+        "lose.wav",
+        "start.wav",
+        "correct.mp3",
+        "error.mp3",
         "sample.mp3",
       ],
       workbox: {
