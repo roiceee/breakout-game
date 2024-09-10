@@ -28,7 +28,9 @@ export default function MainPage() {
   const play = useCallback(() => {
     startTimer();
     setCurrentRound(currentRound + 1);
-    new Audio("/start.wav").play();
+    const audio = new Audio("/start.wav");
+    audio.volume = 0.3;
+    audio.play();
   }, [currentRound, setCurrentRound, startTimer]);
 
   //game over
