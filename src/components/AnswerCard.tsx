@@ -368,7 +368,7 @@ function MultipleChoiceCard({ data, className, onSubmit }: Props) {
         >
           {isError ? "Ulitin Muli" : "Isumite"}
         </button>
-        <div className="mt-2">10 seconds timeout for wrong answer.</div>
+        <div className="mt-2">10 segundo na penalty sa maling sagot.</div>
       </div>
     </div>
   );
