@@ -126,7 +126,7 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
 
   const handleSubmit = useCallback(() => {
     if (onSubmit) {
-      const res = onSubmit(answer, data.answer);
+      const res = onSubmit(answer.toLowerCase(), data.answer.toString().toLowerCase());
       if (!res) {
         setIsError();
       }
