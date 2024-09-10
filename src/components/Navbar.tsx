@@ -16,7 +16,7 @@ export default function Navbar({ className }: { className?: string }) {
               window.location.reload();
             }}
           >
-            <DoorOpen /> Exit Game
+            <DoorOpen /> Umalis
           </button>
         </div>
       </div>

@@ -3,6 +3,7 @@ interface RoundType {
   instruction: string;
   hintText: string;
   roundType: "word" | "number" | "multiple-choice";
+  audioUrl: string;
   choices?: {
     "a"?: string;
     "b"?: string;

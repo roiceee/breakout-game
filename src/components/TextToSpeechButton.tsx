@@ -1,43 +1,55 @@
 import { Megaphone, MegaphoneOff } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function TextToSpeechButton({ text }: { text: string }) {
-  const [isSpeaking, setIsSpeaking] = useState(false);
+export default function AudioPlayerButton({ audioSrc }: { audioSrc: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const readAloud = () => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.voice = speechSynthesis.getVoices()[3];
-    utterance.onend = () => {
-      setIsSpeaking(false);
-    };
-    speechSynthesis.speak(utterance);
-
-    setIsSpeaking(true);
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
   };
 
-  const stopSpeaking = () => {
-    speechSynthesis.cancel();
-    setIsSpeaking(false);
+  const pauseAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
   };
 
   useEffect(() => {
-    return () => stopSpeaking();
+    const handleAudioEnd = () => setIsPlaying(false);
+
+    if (audioRef.current) {
+      audioRef.current.addEventListener("ended", handleAudioEnd);
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("ended", handleAudioEnd);
+      }
+    };
   }, []);
 
   return (
-    <button
-      className="btn btn-outline btn-sm text-xs"
-      onClick={!isSpeaking ? readAloud : stopSpeaking}
-    >
-      {!isSpeaking ? (
-        <>
-          Read Aloud <Megaphone />
-        </>
-      ) : (
-        <>
-          Stop Reading <MegaphoneOff />
-        </>
-      )}
-    </button>
+    <>
+      <audio ref={audioRef} src={audioSrc} />
+      <button
+        className="btn btn-outline btn-sm text-xs"
+        onClick={!isPlaying ? playAudio : pauseAudio}
+      >
+        {!isPlaying ? (
+          <>
+            Basahin <Megaphone />
+          </>
+        ) : (
+          <>
+            Kansel <MegaphoneOff />
+          </>
+        )}
+      </button>
+    </>
   );
 }

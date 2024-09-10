@@ -12,7 +12,7 @@ export default function RoundDisplayCard({
 
   return (
     <div className={`w-full ${className}`}>
-      <div className="flex gap-2 flex-wrap mx-auto">
+      <div className="flex gap-2 flex-wrap mx-auto justify-center ">
         {roundsData.map((value, index) => {
           return (
             <span

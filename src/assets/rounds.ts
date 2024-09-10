@@ -3,12 +3,13 @@ import RoundType from "../types/round-type";
 const sampleRounds: RoundType[] = [
   {
     title: "Identify the Object",
-    imageUrl: "https://via.placeholder.com/800x600",
+    imageUrl: "https://via.placeholder.com/1000x700",
     instruction:
       "Carefully examine the image provided and identify the word that best describes the object or concept depicted. Think about what this item is commonly known as.",
     hintText: "It's something you use daily.",
     roundType: "word",
     answer: "toothbrush",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Solve the Math Problem",
@@ -18,6 +19,7 @@ const sampleRounds: RoundType[] = [
     hintText: "Think basic arithmetic.",
     roundType: "number",
     answer: "42",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Choose the Correct Option",
@@ -33,6 +35,7 @@ const sampleRounds: RoundType[] = [
       d: "Plane",
     },
     answer: "b",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Identify the Sweet Treat",
@@ -41,6 +44,7 @@ const sampleRounds: RoundType[] = [
       "Analyze the image and identify the word that accurately represents the item or concept displayed. Think about common associations and popular terms that fit the description.",
     hintText: "It’s sweet and cold.",
     roundType: "word",
+    audioUrl: "/sample.mp3",
     answer: "icecream",
   },
   {
@@ -51,6 +55,7 @@ const sampleRounds: RoundType[] = [
     hintText: "Sum up the visible items.",
     roundType: "number",
     answer: "15",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Garden Item Choice",
@@ -66,6 +71,7 @@ const sampleRounds: RoundType[] = [
       d: "Shovel",
     },
     answer: "d",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Name the Writing Tool",
@@ -75,6 +81,7 @@ const sampleRounds: RoundType[] = [
     hintText: "It’s used for writing.",
     roundType: "word",
     answer: "pencil",
+    audioUrl: "/sample.mp3",
   },
   {
     title: "Count the Stars",
@@ -84,6 +91,7 @@ const sampleRounds: RoundType[] = [
     hintText: "Count the stars in the image.",
     roundType: "number",
     answer: "7",
+    audioUrl: "/sample.mp3",
   },
 ];
 

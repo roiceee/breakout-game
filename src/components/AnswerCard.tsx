@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useCallback, useContext, useEffect, useState } from "react";
-import RoundType from "../types/round-type";
-import useModal from "../hooks/useModal";
-import useError from "../hooks/useError";
-import RoundContext from "../context/round-context";
-import HintContext from "../context/hint-context";
 import { Lightbulb, LightbulbOff, Trash2Icon } from "lucide-react";
+import { useCallback, useContext, useEffect, useState } from "react";
+import HintContext from "../context/hint-context";
+import RoundContext from "../context/round-context";
+import useError from "../hooks/useError";
+import useModal from "../hooks/useModal";
+import RoundType from "../types/round-type";
+import AudioPlayerButton from "./TextToSpeechButton";
 
 interface Props {
   data: RoundType;
@@ -20,9 +21,9 @@ export default function AnswerCard({ data, className }: Props) {
 
   const { openModal, ModalComponent } = useModal(
     "success",
-    "Correct!",
-    "Click the button below to proceed",
-    "Proceed",
+    "Tumpak!",
+    "Pinduton ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
+    "Magpatuloy",
     nextRound
   );
 
@@ -65,9 +66,15 @@ export default function AnswerCard({ data, className }: Props) {
       className={`card border-2 shadow-lg w-full sm:w-[600px] md:w-[700px] mx-auto ${className}`}
     >
       <div className="card-body">
+        <h2 className="card-title my-2">{data.title}</h2>
+        <div>
+          <AudioPlayerButton audioSrc={data.audioUrl} />
+        </div>
+        <p>{data.instruction}</p>
+
         <div className="flex items-center gap-3 justify-end mb-4">
           <span>
-            Hints remaining: <span className="font-bold">{hints}</span>
+            Natitirang Hints: <span className="font-bold">{hints}</span>
           </span>
           <button
             onClick={onUseHint}
@@ -155,7 +162,7 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
             return (
               <span
                 key={`${value}-answer-${index}`}
-                className="border-2 rounded-full w-20 h-20 flex justify-center items-center font-bold"
+                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
               >
                 {answer.charAt(index).toUpperCase()}
               </span>
@@ -199,7 +206,7 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
             isError ? "btn-error" : "btn-accent"
           } btn-wide text-lg`}
         >
-          {isError ? "Try Again" : "Submit"}
+          {isError ? "Ulitin Muli" : "Isumite"}
         </button>
       </div>
     </div>
@@ -267,7 +274,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
         ).map((_, index) => (
           <span
             key={index}
-            className="border-2 rounded-full w-20 h-20 flex justify-center items-center font-bold"
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold"
           >
             {answer?.toString().charAt(index) || ""}
           </span>
@@ -279,7 +286,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
           <button
             key={num}
             onClick={() => handleAnswer(num.toString())}
-            className="border-2 rounded-full w-14 h-14 flex justify-center items-center font-bold"
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center font-bold text-2xl"
           >
             {num}
           </button>
@@ -307,7 +314,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
             isError ? "btn-error" : "btn-accent"
           } btn-wide text-lg`}
         >
-          {isError ? "Try Again" : "Submit"}
+          {isError ? "Ulitin Muli" : "Isumite"}
         </button>
       </div>
     </div>
@@ -356,10 +363,10 @@ function MultipleChoiceCard({ data, className, onSubmit }: Props) {
           onClick={handleSubmit}
           className={`btn ${
             isError ? "btn-error" : "btn-accent"
-          } btn-wide text-lg`}
+          } btn-wide text-xl`}
           disabled={!selectedChoice || isError} // Disable the button if no choice is selected
         >
-          {isError ? "Try Again" : "Submit"}
+          {isError ? "Ulitin Muli" : "Isumite"}
         </button>
         <div className="mt-2">10 seconds timeout for wrong answer.</div>
       </div>
