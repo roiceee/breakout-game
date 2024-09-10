@@ -26,7 +26,7 @@ export default function RoundDisplayCard({
                 index + 1 < currentRound
                   ? " bg-base-300 text-base-content opacity-60"
                   : ""
-              } border-2 rounded-full w-10 h-10 flex justify-center items-center select-none`}
+              } border-2 rounded-full w-12 h-12 flex justify-center items-center select-none`}
             >
               {index + 1 === roundsData.length ? <LockKeyholeIcon/> : <></> }
               {index + 1 !== roundsData.length &&  value.roundType === "word" ? <WholeWord /> : <></>}

@@ -27,8 +27,9 @@ export default function AudioPlayerButton({ audioSrc }: { audioSrc: string }) {
     }
 
     return () => {
-      if (audioRef.current) {
-        audioRef.current.removeEventListener("ended", handleAudioEnd);
+      const currentAudioRef = audioRef.current;
+      if (currentAudioRef) {
+        currentAudioRef.removeEventListener("ended", handleAudioEnd);
       }
     };
   }, []);
