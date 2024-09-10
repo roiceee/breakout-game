@@ -286,7 +286,7 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
           <button
             key={num}
             onClick={() => handleAnswer(num.toString())}
-            className="border-2 rounded-full w-14 h-14 flex justify-center items-center font-bold text-2xl"
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center text-2xl"
           >
             {num}
           </button>
