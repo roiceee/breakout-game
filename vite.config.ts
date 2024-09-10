@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "autoUpdate",
+      registerType: "prompt",
       includeAssets: [
         "apple-touch.png",
         "favicon.ico",
@@ -24,6 +24,9 @@ export default defineConfig({
       ],
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,mp3,ttf,webp,jpeg,jpg}"],
+      },
+      devOptions: {
+        enabled: true
       },
       manifest: {
         name: "Breakout game",

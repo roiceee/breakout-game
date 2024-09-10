@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
 // Define the available modal types
-type ModalType = "primary" | "success" | "error";
+type ModalType = "primary" | "success" | "error" | "base";
 
 // Define the hook to manage modal state and type
 function useModal(
@@ -61,7 +61,11 @@ function useModal(
                 ? "bg-primary text-primary-content"
                 : type === "success"
                 ? "bg-success text-success-content"
-                : "bg-error text-error-content"
+                : type === "error"
+                ? "bg-error text-error-content"
+                : type === "base"
+                ? "bg-base-100 text-base-content"
+                : ""
             }`}
           >
             <h3 className="font-bold text-lg">{modalContent.title}</h3>

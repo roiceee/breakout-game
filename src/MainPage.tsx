@@ -8,11 +8,24 @@ import RoundContext from "./context/round-context";
 import TimerContext from "./context/timer-context";
 import useModal from "./hooks/useModal";
 import { convertSecondsToSecondsMinutes } from "./utils/timer";
+import { registerSW } from "virtual:pwa-register";
 
 export default function MainPage() {
   const { rounds, currentRound, setCurrentRound } = useContext(RoundContext);
   const { hints } = useContext(HintContext);
   const { startTimer, secondsRemaining, stopTimer } = useContext(TimerContext);
+
+  const { openModal: openOfflineModal, ModalComponent: OfflineModal } =
+    useModal(
+      "base",
+      "Ready to be used offline",
+      "This app is now ready to be used offline. You can now close this tab and open this app again without internet connection.",
+      "Close",
+      () => {
+        window.onbeforeunload = null;
+        window.location.reload();
+      }
+    );
 
   const { openModal: openGameOverModal, ModalComponent } = useModal(
     "error",
@@ -50,13 +63,22 @@ export default function MainPage() {
   }, [currentRound, rounds, stopTimer]);
 
   useEffect(() => {
+    registerSW({
+      onOfflineReady() {
+        openOfflineModal();
+      },
+    });
     window.onbeforeunload = function () {
       return "Are you sure you want to leave?";
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <main className=" min-h-screen pb-2 font-body" style={{backgroundImage: "url(/pattern.webp)"}}>
+    <main
+      className=" min-h-screen pb-2 font-body"
+      style={{ backgroundImage: "url(/pattern.webp)" }}
+    >
       <Navbar className="mb-6" />
 
       <div className="w-full px-2 md:px-4 lg:px-8">
@@ -76,7 +98,9 @@ export default function MainPage() {
               <ul className="px-5 mt-4">
                 <li className="font-bold list-disc">Mayroon kang 3 hints</li>
 
-                <li className="list-disc">Kung maubos ang oras ay hindi na maaaring magpatuloy pa</li>
+                <li className="list-disc">
+                  Kung maubos ang oras ay hindi na maaaring magpatuloy pa
+                </li>
                 <li className="list-disc">
                   Magsisimula ang laro pag pinindot mo ang{" "}
                   <span className="font-bold">"Handa kana ba"</span>
@@ -100,9 +124,7 @@ export default function MainPage() {
               <div>
                 <Trophy size={100} className="mx-auto" />
               </div>
-              <h2 className="card-title">
-                Pagbati! Natapos mo ang laro!
-              </h2>
+              <h2 className="card-title">Pagbati! Natapos mo ang laro!</h2>
               <ul>
                 <li className="flex items-center gap-1 mb-2">
                   <TimerReset /> Natitirang oras:{" "}
@@ -128,6 +150,7 @@ export default function MainPage() {
         )}
       </div>
       {ModalComponent}
+      {OfflineModal}
     </main>
   );
 }
