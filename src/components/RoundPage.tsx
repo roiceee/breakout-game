@@ -1,4 +1,4 @@
-import RoundType from "../types/round-type";
+import {RoundType} from "../types/round-type";
 import AnswerCard from "./AnswerCard";
 import RoundDisplayCard from "./RoundDisplayCard";
 

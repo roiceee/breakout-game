@@ -5,8 +5,7 @@ import HintContext from "../context/hint-context";
 import RoundContext from "../context/round-context";
 import useError from "../hooks/useError";
 import useModal from "../hooks/useModal";
-import RoundType from "../types/round-type";
-import AudioPlayerButton from "./TextToSpeechButton";
+import {RoundType} from "../types/round-type";
 
 interface Props {
   data: RoundType;
@@ -68,9 +67,7 @@ export default function AnswerCard({ data, className }: Props) {
     >
       <div className="card-body">
         <h2 className="card-title my-2">{data.title}</h2>
-        <div>
-          <AudioPlayerButton audioSrc={data.audioUrl} />
-        </div>
+
         <p>{data.instruction}</p>
 
         <div className="flex items-center gap-3 justify-end mb-4">
@@ -126,7 +123,10 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
 
   const handleSubmit = useCallback(() => {
     if (onSubmit) {
-      const res = onSubmit(answer.toLowerCase(), data.answer.toString().toLowerCase());
+      const res = onSubmit(
+        answer.toLowerCase(),
+        data.answer.toString().toLowerCase()
+      );
       if (!res) {
         setIsError();
       }

@@ -21,8 +21,8 @@ export default function Navbar({ className }: { className?: string }) {
         </div>
       </div>
       <div className="navbar-center">
-        <img src="/icon-192.png" className="h-12 -mr-5"/>
-        <a className="btn btn-ghost text-lg sm:text-xl">reakout Game</a>
+        <img src="/icon-192.png" className="h-12 -mr-1"/>
+        <a className="font-bold text-lg sm:text-xl">reakout Game</a>
       </div>
       <div className="navbar-end">
         <div className="px-4">

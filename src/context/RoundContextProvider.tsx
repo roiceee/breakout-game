@@ -1,7 +1,6 @@
 import { useState } from "react";
+import { BreakoutType } from "../types/round-type";
 import RoundContext from "./round-context";
-import roundsData from "../assets/rounds";
-import RoundType from "../types/round-type";
 
 export default function RoundContextProvider({
   children,
@@ -9,8 +8,12 @@ export default function RoundContextProvider({
   children: React.ReactNode;
 }) {
   //rounds, 8 for now
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [rounds, _] = useState((roundsData as RoundType[]).length);
+
+  const [rounds, setRounds] = useState(0);
+  const [roundsData, setRoundsData] = useState<BreakoutType>({
+    title: "",
+    rounds: [],
+  });
   const [currentRound, setCurrentRound] = useState(0);
 
   const setRound = (currentRound: number) => {
@@ -27,11 +30,18 @@ export default function RoundContextProvider({
     setCurrentRound(currentRound + 1);
   };
 
+  const setRoundData = (roundData: BreakoutType) => {
+    setRoundsData(roundData);
+    setRounds(roundData.rounds.length);
+  };
+
   return (
     <RoundContext.Provider
       value={{
         rounds: rounds,
         currentRound: currentRound,
+        roundsData: roundsData,
+        setRoundsData: setRoundData,
         nextRound: nextRound,
         setCurrentRound: setRound,
       }}
