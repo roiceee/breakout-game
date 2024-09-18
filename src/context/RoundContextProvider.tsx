@@ -13,6 +13,7 @@ export default function RoundContextProvider({
   const [roundsData, setRoundsData] = useState<BreakoutType>({
     title: "",
     rounds: [],
+    description: "",
   });
   const [currentRound, setCurrentRound] = useState(0);
 

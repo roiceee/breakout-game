@@ -1,7 +1,7 @@
 interface RoundType {
   imageUrl: string;
   instruction: string;
-  hintText: string;
+  hintText?: string;
   roundType: "word" | "number" | "multiple-choice";
   choices?: {
     "a"?: string;
@@ -15,6 +15,7 @@ interface RoundType {
 
 interface BreakoutType {
   title: string;
+  description: string;
   rounds: RoundType[];
 }
 

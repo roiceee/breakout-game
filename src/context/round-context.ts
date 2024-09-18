@@ -11,7 +11,7 @@ const RoundContext = createContext<{
 }>({
   rounds: 0,
   currentRound: 0,
-  roundsData: { title: "", rounds: [] },
+  roundsData: { title: "", rounds: [], description: "" },
   setRoundsData: () => {},
   nextRound: () => {},
   setCurrentRound: () => {},
