@@ -5,7 +5,7 @@ import HintContext from "../context/hint-context";
 import RoundContext from "../context/round-context";
 import useError from "../hooks/useError";
 import useModal from "../hooks/useModal";
-import {RoundType} from "../types/round-type";
+import { RoundType } from "../types/round-type";
 
 interface Props {
   data: RoundType;
@@ -57,7 +57,7 @@ export default function AnswerCard({ data, className }: Props) {
   };
 
   useEffect(() => {
-    setHintModalContent(undefined, "Hint", data.hintText, "Close");
+    setHintModalContent(undefined, "Hint", data.hintText ? data.hintText : "", "Close");
     setIsHintUsed(false);
   }, [data.hintText, setHintModalContent]);
 
@@ -79,7 +79,7 @@ export default function AnswerCard({ data, className }: Props) {
             className={`btn btn-sm ${
               isHintUsed ? "btn-outline" : "btn-secondary"
             }`}
-            disabled={hints === 0 && !isHintUsed}
+            disabled={(hints === 0 && !isHintUsed) || !data.hintText}
           >
             {hints !== 0 || isHintUsed ? <Lightbulb /> : <LightbulbOff />}
           </button>
@@ -107,29 +107,35 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
 
   const handleAnswer = useCallback(
     (str: string) => {
+      // Prevent input for hyphens and commas
       if (str === "Backspace") {
         setAnswer(answer.slice(0, -1));
         return;
       }
-      if (answer.length === (data.answer as string).length) {
+      if (
+        answer.length === (data.answer as string).replace(/[-,\s]/g, "").length
+      ) {
         return;
       }
-      setAnswer((prev) => {
-        return prev + str;
-      });
+      setAnswer((prev) => prev + str);
     },
     [data.answer, answer]
   );
 
   const handleSubmit = useCallback(() => {
     if (onSubmit) {
-      const res = onSubmit(
-        answer.toLowerCase(),
-        data.answer.toString().toLowerCase()
-      );
+      const cleanedAnswer = answer.replace(/[-,\s]/g, "").toLowerCase();
+      const cleanedDataAnswer = data.answer
+        .toString()
+        .replace(/[-,\s]/g, "")
+        .toLowerCase();
+
+      const res = onSubmit(cleanedAnswer, cleanedDataAnswer);
       if (!res) {
         setIsError();
+        return;
       }
+      setAnswer("");
     }
   }, [answer, data.answer, onSubmit, setIsError]);
 
@@ -146,7 +152,6 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
 
     window.addEventListener("keydown", keyPressHandler);
 
-    // Proper cleanup to prevent multiple event listeners
     return () => {
       window.removeEventListener("keydown", keyPressHandler);
     };
@@ -155,25 +160,44 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
   return (
     <div className={`s${className}`}>
       <div className="flex gap-2 justify-center flex-wrap">
-        {
-          // cast data.answer to string
-          (data.answer as string).split("").map((value, index) => {
-            //return an empty circle if depending on answer state
-
+        {(data.answer as string).split("").map((value, index) => {
+          // Render spaces, hyphens, and commas appropriately
+          if (value === " ") {
+            return <span key={`space-${index}`} className="w-8" />;
+          }
+          if (value === "-") {
             return (
               <span
-                key={`${value}-answer-${index}`}
-                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
+                key={`hyphen-${index}`}
+                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
               >
-                {answer.charAt(index).toUpperCase()}
+                -
               </span>
             );
-          })
-        }
+          }
+          if (value === ",") {
+            return (
+              <span
+                key={`comma-${index}`}
+                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
+              >
+                ,
+              </span>
+            );
+          }
+
+          return (
+            <span
+              key={`${value}-answer-${index}`}
+              className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
+            >
+              {answer.charAt(index).toUpperCase()}
+            </span>
+          );
+        })}
       </div>
 
-      {/* {render a-z keys, capital all} */}
-
+      {/* Render a-z keys, capital letters */}
       <div className="flex gap-2 justify-center flex-wrap mt-10">
         {Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)).map(
           (char) => (
@@ -199,7 +223,8 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
           <Trash2Icon />
         </button>
       </div>
-      {/* submit */}
+
+      {/* Submit */}
       <div className="mt-8 text-center">
         <button
           onClick={handleSubmit}
@@ -241,7 +266,9 @@ function NumberAnswerCard({ data, className, onSubmit }: Props) {
       const res = onSubmit(answer, data.answer);
       if (!res) {
         setIsError();
+        return;
       }
+      setAnswer("");
     }
   }, [answer, data.answer, onSubmit, setIsError]);
 
@@ -335,7 +362,9 @@ function MultipleChoiceCard({ data, className, onSubmit }: Props) {
       const res = onSubmit(selectedChoice, data.answer);
       if (!res) {
         setIsError(10000);
+        return;
       }
+      setSelectedChoice(null);
     }
   }, [selectedChoice, data.answer, onSubmit, setIsError]);
 
