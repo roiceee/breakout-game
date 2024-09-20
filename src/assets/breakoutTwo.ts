@@ -1,92 +1,97 @@
 import { BreakoutType } from "../types/round-type";
 
 const breakoutTwo: BreakoutType = {
-  title: "This is a title 2",
+  title: "Pagsusuri ng Kwento: Alamin ang Sekreto",
+  description:
+    "Sa bawat lebel ng laro ay mayroong mga lohikal na laro na nagbibigay kaalaman hinggil sa binasang kwentong 'Niyebeng Itim'.",
   rounds: [
     {
-      title: "Identify the Objectboom",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      imageUrl: "/two/1.png", // replace with the correct image URL
       instruction:
-        "Carefully examine the image provided and identify the word that best describes the object or concept depicted. Think about what this item is commonly known as.",
-      hintText: "It's something you use daily.",
+        "Nang bumalik siya para kunin ang litrato, mas kabado siya kaysa nang kunin ang kanyang ina sa crematorium...",
+      hintText:
+        "Lahat ng mga sinusunog kapag natumpok ay ganito ang magiging kinalabasan ng gamit.",
       roundType: "word",
-      answer: "toothbrush",
+      answer: "Abo",
+      title: "Level 1",
     },
     {
-      title: "Solve the Math Problem",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      imageUrl: "/two/2.png",
       instruction:
-        "Look closely at the mathematical problem presented in the image and solve it by applying the appropriate operations. Input your final answer in the field provided.",
-      hintText: "Think basic arithmetic.",
-      roundType: "number",
-      answer: "42",
-    },
-    {
-      title: "Choose the Correct Option",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Observe the image and choose the correct option from the provided choices that best describes or relates to the subject matter shown. Consider all possible interpretations before selecting your answer.",
-      hintText: "It's a mode of transport.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Car",
-        b: "Bicycle",
-        c: "Boat",
-        d: "Plane",
-      },
-      answer: "b",
-    },
-    {
-      title: "Identify the Sweet Treat",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Analyze the image and identify the word that accurately represents the item or concept displayed. Think about common associations and popular terms that fit the description.",
-      hintText: "It’s sweet and cold.",
+        "Napuno ng kulay berde sa kaniyang tindahan — isang bunton ng walong kulay-olibang kasuotang pang-army...",
+      hintText: "Mas makatipid kung bultuhan kung bumili.",
       roundType: "word",
-
-      answer: "icecream",
+      answer: "Pakyawan",
+      title: "Level 2",
     },
     {
-      title: "Count the Total",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      imageUrl: "/two/3.png",
       instruction:
-        "Examine the image and calculate the total number represented by the objects or figures shown. Add up all the elements you can see to arrive at the correct total.",
-      hintText: "Sum up the visible items.",
-      roundType: "number",
-      answer: "15",
-    },
-    {
-      title: "Garden Item Choice",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Take a good look at the image and select the correct answer from the multiple-choice options provided. Consider how each option relates to the image before making your choice.",
-      hintText: "This is commonly found in a garden.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Tree",
-        b: "Car",
-        c: "Lamp",
-        d: "Shovel",
-      },
-      answer: "d",
-    },
-    {
-      title: "Name the Writing Tool",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Carefully observe the image and determine the word that best fits the description of the object or concept shown. Think about what this item is commonly called.",
-      hintText: "It’s used for writing.",
+        "Isang stereo ang bumubuga ng awit, iyong tunog na di-maintindihan...",
+      hintText: "Nakaraang tawag sa Beijing.",
       roundType: "word",
-      answer: "pencil",
+      answer: "Peking opera",
+      title: "Level 3",
     },
     {
-      title: "Count the Stars",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      imageUrl: "/two/4.png",
+      instruction: "Tamang-tama. Hindi ka magsisisi...",
+      hintText: "Ikaapat na letra ay letrang 'i'.",
+      roundType: "word",
+      answer: "Kariton",
+      title: "Level 4",
+    },
+    {
+      imageUrl: "/two/5.png",
       instruction:
-        "Study the image closely and solve the problem by identifying and counting the relevant objects. Enter the correct number in the provided space.",
-      hintText: "Count the stars in the image.",
-      roundType: "number",
-      answer: "7",
+        "Sa umpisa, panaka-naka ang mga paputok, ngunit dumalas ang ingay...",
+      hintText: "Pagtataboy ng malas, pagpapalapit ng swerte.",
+      roundType: "word",
+      answer: "New Year",
+      title: "Level 5",
+    },
+    {
+      imageUrl: "/two/6.png",
+      instruction: "Isang simbolo ng pagpapakita ng paggalang sa kapwa...",
+      hintText: "Kabahagi ng pagmamano.",
+      roundType: "word",
+      answer: "Pagyuko",
+      title: "Level 6",
+    },
+    {
+      imageUrl: "/two/7.png",
+      instruction:
+        "Hindi naaprobahan ang kaniyang aplikasyon para sa lisensiya...",
+      hintText: "Maaring pang-propesyonal o hindi.",
+      roundType: "word",
+      answer: "Pagtitinda",
+      title: "Level 7",
+    },
+    {
+      imageUrl: "/two/8.png",
+      instruction: "Sa sumunod na araw, nakabenta siya ng muffler...",
+      hintText:
+        "Isa sa mga sekreto ng mga Tsino upang mas lumago ang pangkabuhayan.",
+      roundType: "word",
+      answer: "Pagtitimpi",
+      title: "Level 8",
+    },
+    {
+      imageUrl: "/two/9.png",
+      instruction:
+        "Nakasaad sa kwentong Niyebeng Itim ang mga gawi, simbolo...",
+      roundType: "word",
+      answer:
+        "Ang buhay at karanasan ni Li Huiquan sa kaniyang pamumuhay sa Tsina",
+      title: "Level 9",
+    },
+    {
+      imageUrl: "/two/10.png",
+      instruction:
+        "Ano ang pokus ng Niyebeng Itim upang ipakilala ang natatanging pagkakilanlan...",
+      roundType: "word",
+      answer: "Kaugalian, tradisyon, kultura ng Tsina",
+      title: "Level 10",
     },
   ],
 };

@@ -1,4 +1,4 @@
-import { Lightbulb, TimerReset, Trophy } from "lucide-react";
+import { Gamepad, Lightbulb, TimerReset, Trophy } from "lucide-react";
 import { useCallback, useContext, useEffect } from "react";
 import { registerSW } from "virtual:pwa-register";
 import RoundPage from "./components/RoundPage";
@@ -79,14 +79,7 @@ export default function GamePage() {
         <div className="card bg-primary text-primary-content min-w-[300px] max-w-[600px] mx-auto md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <div className="card-body">
             <h2 className="card-title mx-auto">{roundsData.title}</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              tenetur, itaque corrupti a assumenda est recusandae quod ipsum
-              voluptates cum debitis vel dolorum facilis! Odio quos ea
-              blanditiis. Dicta, laboriosam deserunt blanditiis odio quas facere
-              quam fugiat accusamus architecto quae delectus, provident
-              possimus, amet pariatur quasi repudiandae obcaecati expedita qui?
-            </p>
+            <p>{roundsData.description}</p>
             <ul className="px-5 mt-4">
               <li className="font-bold list-disc">Mayroon kang 3 hints</li>
 
@@ -118,6 +111,9 @@ export default function GamePage() {
             </div>
             <h2 className="card-title">Pagbati! Natapos mo ang laro!</h2>
             <ul>
+              <li className="flex items-center gap-1 mb-2">
+                <Gamepad /> Uri ng laro: <b>{roundsData.title}</b>
+              </li>
               <li className="flex items-center gap-1 mb-2">
                 <TimerReset /> Natitirang oras:{" "}
                 <b>{convertSecondsToSecondsMinutes(secondsRemaining)}</b>

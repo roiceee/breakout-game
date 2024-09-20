@@ -1,92 +1,101 @@
 import { BreakoutType } from "../types/round-type";
 
 const breakoutOne: BreakoutType = {
-  title: "This is a title",
+  title: "HATOLino ng Kuneho",
+  description:
+    "Ipagpalagay na ikaw ay isang manlalakbay. Sa paglalakad ay nakasalamuha mo ang iba't ibang uri ng hayop na may iba't ibang problema. Ang misyon mo ay tulungan ang bawat isa at mahanap ang ibig ipakahulugan ng liham ni Haring Tubino. Sa iyong paglalakbay, maaaring makasalubong mo ang mga number bonds, crossword puzzles, at picture analysis na kinakailangan mong talunin. Handa ka na ba? Simulan na natin ang paglalakbay!",
   rounds: [
     {
-      title: "Identify the Object",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 1",
       instruction:
-        "Carefully examine the image provided and identify the word that best describes the object or concept depicted. Think about what this item is commonly known as.",
-      hintText: "It's something you use daily.",
+        "Ang bawat titik ay may kakambal na numero. Sagutin ang mga sumusunod na ekspresyon sa sipnayan. Isulat ang titik upang makabuo ng salita.",
+      imageUrl: "/one/1.png",
       roundType: "word",
-      answer: "toothbrush",
+      answer: "PABULA",
+      hintText: "Panitikan na ang pangunahing tauhan ay mga hayop.",
     },
     {
-      title: "Solve the Math Problem",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 2",
       instruction:
-        "Look closely at the mathematical problem presented in the image and solve it by applying the appropriate operations. Input your final answer in the field provided.",
-      hintText: "Think basic arithmetic.",
-      roundType: "number",
-      answer: "42",
-    },
-    {
-      title: "Choose the Correct Option",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Observe the image and choose the correct option from the provided choices that best describes or relates to the subject matter shown. Consider all possible interpretations before selecting your answer.",
-      hintText: "It's a mode of transport.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Car",
-        b: "Bicycle",
-        c: "Boat",
-        d: "Plane",
-      },
-      answer: "b",
-    },
-    {
-      title: "Identify the Sweet Treat",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Analyze the image and identify the word that accurately represents the item or concept displayed. Think about common associations and popular terms that fit the description.",
-      hintText: "It’s sweet and cold.",
+        "Ang tao ay hayop din naman. Parehong nakararamdaman. Nagagalit, nalulungkot, may kinakatakutan. Nilalamon ng poot, at may paninindigan. Kaya kung sakaling ikaw man ay naguguluhan. Katulad ko’y naghahanap din ng kasagutan. Bakit hindi subukan na ang unang talata’y balikan. Baka sa saknong na iyon mo matutuklasan.",
+      imageUrl: "/one/2.png",
       roundType: "word",
-
-      answer: "icecream",
+      answer: "Nakararamdam",
+      hintText: "Tingnan ng ikalawang beses at makikita mo ang kasagutan.",
     },
     {
-      title: "Count the Total",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 3",
       instruction:
-        "Examine the image and calculate the total number represented by the objects or figures shown. Add up all the elements you can see to arrive at the correct total.",
-      hintText: "Sum up the visible items.",
-      roundType: "number",
-      answer: "15",
-    },
-    {
-      title: "Garden Item Choice",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Take a good look at the image and select the correct answer from the multiple-choice options provided. Consider how each option relates to the image before making your choice.",
-      hintText: "This is commonly found in a garden.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Tree",
-        b: "Car",
-        c: "Lamp",
-        d: "Shovel",
-      },
-      answer: "d",
-    },
-    {
-      title: "Name the Writing Tool",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Carefully observe the image and determine the word that best fits the description of the object or concept shown. Think about what this item is commonly called.",
-      hintText: "It’s used for writing.",
+        "Gamit ang mga numero, tukuyin mo ang elemento. Gabay mo’y litrato. Sa akin makikilala ang bida ng istorya at maging ang lugar, sa akin mo makikita. Ano ako?",
+      imageUrl: "/one/3.png",
       roundType: "word",
-      answer: "pencil",
+      answer: "Simula",
+      hintText:
+        "Mata’y palawakin, letra’t numero’y busisiin upang sagot ay maangkin.",
     },
     {
-      title: "Count the Stars",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 4",
       instruction:
-        "Study the image closely and solve the problem by identifying and counting the relevant objects. Enter the correct number in the provided space.",
-      hintText: "Count the stars in the image.",
+        "Itugma ang letra sa kulay ng mga tauhan na matatagpuan sa storya. Isulat ang kulay ng iyong kasagutan. Kulay lamang ang ilagay.",
+      imageUrl: "/one/4.png",
+      roundType: "word",
+      answer: "Asul, Pula, Berde, Dilaw",
+      hintText: "Tumitig sa bawat titik.",
+    },
+    {
+      title: "Level 5",
+      instruction:
+        "Suriin ang mga larawan sa ibaba. Pagsunod-sunurin ang mga larawan batay sa antas ng kanilang emosyon.",
+      imageUrl: "/one/5.png",
       roundType: "number",
-      answer: "7",
+      answer: "1324",
+      hintText: "Sa pahayag ka tumingin, huwag sa akin.",
+    },
+    {
+      title: "Level 6",
+      instruction:
+        "Magaling, nagawa mong makita ang pagkakasunod-sunod sa emosyon na ipinakita ng tigre. Ngayon naman ay nais ko sana na tulungan mo akong alamin ang kahulugan ng pagkiklino.",
+      imageUrl: "/one/6.png",
+      roundType: "word",
+      answer: "Pag-aantas sa tindi ng kahulugan ng salita",
+      hintText: "Unang letrang hinahanap ay makikita sa unang salita.",
+    },
+    {
+      title: "Level 7",
+      instruction:
+        "Ihambing ang katangian ng mga tauhan sa kuwento. Hal. Tao:: Matulungin:: Mga kawal na tutubi.",
+      imageUrl: "/one/7.png",
+      roundType: "word",
+      answer: "KATALINUHAN",
+      hintText:
+        "Kung sakaling hindi alam ang gagawin. Sundan ang linya at sa sagot ika’y dadalhin.",
+    },
+    {
+      title: "Level 8",
+      instruction:
+        "Hanapin ang limang salitang naglalarawan sa mga Pilipino batay sa kuwentong 'Nagkamali ng utos.'",
+      imageUrl: "/one/8.png",
+      roundType: "word",
+      answer: "KATANGIAN NG KANLURANING ASYA",
+      hintText: "Kapag nasimulang makita ang isa, makikita mo na rin ang iba.",
+    },
+    {
+      title: "Level 9",
+      instruction:
+        "Tukuyin ang mga hayop na makikita sa Pilipinas na makikita rin sa Asya.",
+      imageUrl: "/one/9.png",
+      roundType: "number",
+      answer: "23 1 1 22 7 1 12 9 18",
+      hintText: "Isa sa mga ito ay si Lolong!",
+    },
+    {
+      title: "Level 10",
+      instruction:
+        "Isang pagpupugay sa iyo manlalakbay! Narito ka na sa huling bahagi dala ng iyong pagpupursige. Bago ka magpatuloy sa susunod na yugto baunin mo itong liham na ipinadala sa iyo ni Haring Tutubi. Sabi niya’y ito raw ang pinakamahalagang sandatang dapat mong dalhin.",
+      imageUrl: "/one/10.png",
+      roundType: "word",
+      answer: "Pagpapasya",
+      hintText: "Sa katangiang ito magaling si Kuneho at si Haring Tubino.",
     },
   ],
 };

@@ -6,11 +6,13 @@ import RoundContext from "../context/round-context";
 import useError from "../hooks/useError";
 import useModal from "../hooks/useModal";
 import { RoundType } from "../types/round-type";
+import _ from "lodash";
 
 interface Props {
   data: RoundType;
   className?: string;
   onSubmit?: (answer: any, correctAnswer: any) => boolean;
+  type?: "word" | "number";
 }
 
 export default function AnswerCard({ data, className }: Props) {
@@ -57,7 +59,12 @@ export default function AnswerCard({ data, className }: Props) {
   };
 
   useEffect(() => {
-    setHintModalContent(undefined, "Hint", data.hintText ? data.hintText : "", "Close");
+    setHintModalContent(
+      undefined,
+      "Hint",
+      data.hintText ? data.hintText : "",
+      "Close"
+    );
     setIsHintUsed(false);
   }, [data.hintText, setHintModalContent]);
 
@@ -85,11 +92,12 @@ export default function AnswerCard({ data, className }: Props) {
           </button>
         </div>
         {/* give me a div for word answer input, it should render per letter */}
-        {data.roundType === "word" && (
-          <WordAnswerCard data={data} onSubmit={onSubmit} />
-        )}
-        {data.roundType === "number" && (
-          <NumberAnswerCard data={data} onSubmit={onSubmit} />
+        {(data.roundType === "word" || data.roundType === "number") && (
+          <InputAnswerCard
+            data={data}
+            onSubmit={onSubmit}
+            type={data.roundType}
+          />
         )}
         {data.roundType === "multiple-choice" && (
           <MultipleChoiceCard data={data} onSubmit={onSubmit} />
@@ -101,7 +109,7 @@ export default function AnswerCard({ data, className }: Props) {
   );
 }
 
-function WordAnswerCard({ data, className, onSubmit }: Props) {
+function InputAnswerCard({ data, className, onSubmit, type }: Props) {
   const [answer, setAnswer] = useState<string>("");
   const { isError, setIsError } = useError();
 
@@ -139,14 +147,78 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
     }
   }, [answer, data.answer, onSubmit, setIsError]);
 
+  const RenderAnswer = (): React.ReactNode => {
+    const roundAnswerArray = (data.answer as string).toLowerCase().split("");
+    const currentAnswerArray = answer.toLowerCase().split("");
+
+    let answerIndexCounter = 0;
+
+    return roundAnswerArray.map((value, index) => {
+      if (value === " ") {
+        return <span key={`space-${index}`} className="w-8" />;
+      }
+      if (value === "-") {
+        return (
+          <span
+            key={`hyphen-${index}`}
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
+          >
+            -
+          </span>
+        );
+      }
+      if (value === ":") {
+        return (
+          <span
+            key={`colon-${index}`}
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
+          >
+            :
+          </span>
+        );
+      }
+      if (value === ",") {
+        return (
+          <span
+            key={`comma-${index}`}
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
+          >
+            ,
+          </span>
+        );
+      }
+
+      // if (value === currentAnswerArray[answerIndexCounter]) {
+      //   answerIndexCounter++;
+      // }
+
+      return (
+        <span
+          key={`${value}-answer-${index}`}
+          className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
+        >
+          {_.upperCase(currentAnswerArray[answerIndexCounter++])}
+        </span>
+      );
+    });
+  };
+
   useEffect(() => {
     const keyPressHandler = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         handleSubmit();
       }
 
-      if (e.key.match(/^[a-zA-Z]$/) || e.key === "Backspace") {
-        handleAnswer(e.key);
+      if (type === "word") {
+        if (e.key.match(/^[a-zA-Z]$/) || e.key === "Backspace") {
+          handleAnswer(e.key);
+        }
+      }
+
+      if (type === "number") {
+        if (e.key.match(/^[0-9]$/) || e.key === "Backspace") {
+          handleAnswer(e.key);
+        }
       }
     };
 
@@ -155,52 +227,20 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
     return () => {
       window.removeEventListener("keydown", keyPressHandler);
     };
-  }, [handleAnswer, handleSubmit]);
+  }, [handleAnswer, handleSubmit, type]);
 
   return (
     <div className={`s${className}`}>
       <div className="flex gap-2 justify-center flex-wrap">
-        {(data.answer as string).split("").map((value, index) => {
-          // Render spaces, hyphens, and commas appropriately
-          if (value === " ") {
-            return <span key={`space-${index}`} className="w-8" />;
-          }
-          if (value === "-") {
-            return (
-              <span
-                key={`hyphen-${index}`}
-                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
-              >
-                -
-              </span>
-            );
-          }
-          if (value === ",") {
-            return (
-              <span
-                key={`comma-${index}`}
-                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
-              >
-                ,
-              </span>
-            );
-          }
-
-          return (
-            <span
-              key={`${value}-answer-${index}`}
-              className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
-            >
-              {answer.charAt(index).toUpperCase()}
-            </span>
-          );
-        })}
+        {<RenderAnswer />}
       </div>
 
       {/* Render a-z keys, capital letters */}
-      <div className="flex gap-2 justify-center flex-wrap mt-10">
-        {Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)).map(
-          (char) => (
+      {type === "word" && (
+        <div className="flex gap-2 justify-center flex-wrap mt-10">
+          {Array.from({ length: 26 }, (_, i) =>
+            String.fromCharCode(65 + i)
+          ).map((char) => (
             <button
               key={char}
               onClick={() => handleAnswer(char)}
@@ -208,133 +248,51 @@ function WordAnswerCard({ data, className, onSubmit }: Props) {
             >
               {char}
             </button>
-          )
-        )}
-        <button
-          onClick={() => handleAnswer("Backspace")}
-          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
-        >
-          ⌫
-        </button>
-        <button
-          onClick={() => setAnswer("")}
-          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
-        >
-          <Trash2Icon />
-        </button>
-      </div>
-
-      {/* Submit */}
-      <div className="mt-8 text-center">
-        <button
-          onClick={handleSubmit}
-          className={`btn ${
-            isError ? "btn-error" : "btn-accent"
-          } btn-wide text-lg`}
-        >
-          {isError ? "Ulitin Muli" : "Isumite"}
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function NumberAnswerCard({ data, className, onSubmit }: Props) {
-  const [answer, setAnswer] = useState<string>("");
-  const { isError, setIsError } = useError();
-
-  const handleAnswer = useCallback(
-    (str: string) => {
-      if (str === "Backspace") {
-        setAnswer((prev) => {
-          return prev.slice(0, -1);
-        });
-        return;
-      }
-      if (answer.length === (data.answer as string).length) {
-        return;
-      }
-      setAnswer((prev) => {
-        return (prev || "") + str;
-      });
-    },
-    [answer.length, data.answer]
-  );
-
-  const handleSubmit = useCallback(() => {
-    if (onSubmit) {
-      const res = onSubmit(answer, data.answer);
-      if (!res) {
-        setIsError();
-        return;
-      }
-      setAnswer("");
-    }
-  }, [answer, data.answer, onSubmit, setIsError]);
-
-  useEffect(() => {
-    const keyPressHandler = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        handleSubmit();
-      }
-
-      if (e.key.match(/^[0-9]$/) || e.key === "Backspace") {
-        handleAnswer(e.key);
-      }
-    };
-
-    window.addEventListener("keydown", keyPressHandler);
-
-    // Proper cleanup to prevent multiple event listeners
-    return () => {
-      window.removeEventListener("keydown", keyPressHandler);
-    };
-  }, [handleAnswer, handleSubmit]);
-
-  return (
-    <div className={`${className}`}>
-      {/* render div based on digits */}
-
-      <div className="flex justify-center gap-2">
-        {Array.from(
-          { length: (data.answer as number).toString().length },
-          (_, i) => i
-        ).map((_, index) => (
-          <span
-            key={index}
-            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
-          >
-            {answer?.toString().charAt(index) || ""}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex gap-2 justify-center flex-wrap mt-10">
-        {Array.from({ length: 10 }, (_, i) => i).map((num) => (
+          ))}
           <button
-            key={num}
-            onClick={() => handleAnswer(num.toString())}
+            onClick={() => handleAnswer("Backspace")}
             className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
           >
-            {num}
+            ⌫
           </button>
-        ))}
-        {/* backspace */}
-        <button
-          onClick={() => handleAnswer("Backspace")}
-          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
-        >
-          ⌫
-        </button>
-        <button
-          onClick={() => setAnswer("")}
-          className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
-        >
-          <Trash2Icon />
-        </button>
-      </div>
+          <button
+            onClick={() => setAnswer("")}
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
+          >
+            <Trash2Icon />
+          </button>
+        </div>
+      )}
 
-      {/* submit */}
+      {/* Render 0-9 keys */}
+      {type === "number" && (
+        <div className="flex gap-2 justify-center flex-wrap mt-10">
+          {Array.from({ length: 10 }, (_, i) => i).map((num) => (
+            <button
+              key={num}
+              onClick={() => handleAnswer(num.toString())}
+              className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
+            >
+              {num}
+            </button>
+          ))}
+          {/* backspace */}
+          <button
+            onClick={() => handleAnswer("Backspace")}
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
+          >
+            ⌫
+          </button>
+          <button
+            onClick={() => setAnswer("")}
+            className="border-2 rounded-full w-14 h-14 flex justify-center items-center"
+          >
+            <Trash2Icon />
+          </button>
+        </div>
+      )}
+
+      {/* Submit */}
       <div className="mt-8 text-center">
         <button
           onClick={handleSubmit}

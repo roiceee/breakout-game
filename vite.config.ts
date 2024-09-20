@@ -21,6 +21,11 @@ export default defineConfig({
         "correct.mp3",
         "error.mp3",
         "sample.mp3",
+        "one/*.png",
+        "two/*.png",
+        "three/*.png",
+        "four/*.png",
+        "five/*.png"
       ],
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,mp3,ttf,webp,jpeg,jpg}"],

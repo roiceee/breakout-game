@@ -1,92 +1,100 @@
 import { BreakoutType } from "../types/round-type";
 
 const breakoutFour: BreakoutType = {
-  title: "This is a title",
+  title: "Ang Hardinero at ang Banga",
+  description:
+    "Maligayang pagdating, kagalang-galang na hardinero!]\nTulungan mo ang anak na banga na tandaan ang mga payo na ibiliin ng kanyang ina. Sa pamamagitan ng mga crossword puzzles, picture analysis, at poetry analysis, tuklasin natin ang mahiwagang mundo ng mga banga na puno ng hiwaga.",
   rounds: [
     {
-      title: "Identify the Object",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 1",
       instruction:
-        "Carefully examine the image provided and identify the word that best describes the object or concept depicted. Think about what this item is commonly known as.",
-      hintText: "It's something you use daily.",
+        "Magandang araw, kagalang-galang na Hardinero. Maaari mo ba akong tulungan? Kailangan ko kasi malaman kung ano ang ginawa ng banga sa kanyang magulang na ginagawa rin ng ibang bata. Hanapin mo ang kasagutan sa ibaba.",
+      imageUrl: "/four/1.png",
       roundType: "word",
-      answer: "toothbrush",
+      answer: "SINUWAY",
+      hintText: "Ang nagmamataas ay ibinababa.",
     },
     {
-      title: "Solve the Math Problem",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 2",
       instruction:
-        "Look closely at the mathematical problem presented in the image and solve it by applying the appropriate operations. Input your final answer in the field provided.",
-      hintText: "Think basic arithmetic.",
-      roundType: "number",
-      answer: "42",
-    },
-    {
-      title: "Choose the Correct Option",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Observe the image and choose the correct option from the provided choices that best describes or relates to the subject matter shown. Consider all possible interpretations before selecting your answer.",
-      hintText: "It's a mode of transport.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Car",
-        b: "Bicycle",
-        c: "Boat",
-        d: "Plane",
-      },
-      answer: "b",
-    },
-    {
-      title: "Identify the Sweet Treat",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Analyze the image and identify the word that accurately represents the item or concept displayed. Think about common associations and popular terms that fit the description.",
-      hintText: "It’s sweet and cold.",
+        "Matagumpay! Kaso mayroon pang gumagambala sa akin. Kanino mo mahahalintulad ang estado ng buhay? Kasagutan ba ay maibibigay?",
+      imageUrl: "/four/2.png",
       roundType: "word",
-
-      answer: "icecream",
+      answer: "Banga at Metal",
+      hintText: "Ang isa ay maaaring marupok samantala ang isa ay matigas.",
     },
     {
-      title: "Count the Total",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 3",
       instruction:
-        "Examine the image and calculate the total number represented by the objects or figures shown. Add up all the elements you can see to arrive at the correct total.",
-      hintText: "Sum up the visible items.",
-      roundType: "number",
-      answer: "15",
-    },
-    {
-      title: "Garden Item Choice",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Take a good look at the image and select the correct answer from the multiple-choice options provided. Consider how each option relates to the image before making your choice.",
-      hintText: "This is commonly found in a garden.",
-      roundType: "multiple-choice",
-      choices: {
-        a: "Tree",
-        b: "Car",
-        c: "Lamp",
-        d: "Shovel",
-      },
-      answer: "d",
-    },
-    {
-      title: "Name the Writing Tool",
-      imageUrl: "https://via.placeholder.com/1000x700",
-      instruction:
-        "Carefully observe the image and determine the word that best fits the description of the object or concept shown. Think about what this item is commonly called.",
-      hintText: "It’s used for writing.",
+        "Ah yun pala yun? Isa pang katanungan, maaari mo bang sabihin sa akin kung ano ang mga elemento ng parabula? Tingnan mo pa rin sa baba.",
+      imageUrl: "/four/3.png",
       roundType: "word",
-      answer: "pencil",
+      answer: "Panimula, Tauhan, Lunan, Banghay",
+      hintText: "Kapag nakita na ang isa, makikita na ang iba.",
     },
     {
-      title: "Count the Stars",
-      imageUrl: "https://via.placeholder.com/1000x700",
+      title: "Level 4",
       instruction:
-        "Study the image closely and solve the problem by identifying and counting the relevant objects. Enter the correct number in the provided space.",
-      hintText: "Count the stars in the image.",
-      roundType: "number",
-      answer: "7",
+        "Alam mo ba, kagalang-galang na Hardinero? Nalilito pa rin ako sa sinabi ng Inang Banga sa kanyang anak, ano ba ang ibig niyang sabihin? Maaari mo bang ayusin ang mga salita para sa akin?",
+      imageUrl: "/four/4.png",
+      roundType: "word",
+      answer: "Mapagkumbaba",
+      hintText:
+        "Kahit haluin mang mabuti malalaman mo parin kapag hindi ka mapagmataas.",
+    },
+    {
+      title: "Level 5",
+      instruction:
+        "Hindi pa ako tapos, kagalang-galang na hardinero. Pakiusap tulungan mo akong alamin ang literal at matalinghagang kahulugan ng mga salitang may kulay. Sa itaas ay literal, sa baba naman ang matalinghaga.",
+      imageUrl: "/four/5.png",
+      roundType: "word",
+      answer: "Gawa sa lupa: Mahirap, Gawa sa porselana: Mayaman",
+      hintText: "Tingnan ang kumpleksidad ng pagkakagawa sa kanila.",
+    },
+    {
+      title: "Level 6",
+      instruction:
+        "Kagalang-galang na hardinero, patulong naman ako sa pagsagot nito. Hindi raw kasi literal na kahulugan ang kanilang gusto, ang gusto nila’y yung matalinghaga.",
+      imageUrl: "/four/6.png",
+      roundType: "word",
+      answer: "Mapabigay, Pinaghirapan, Ina",
+      hintText: "Kung sakaling nahihirapan, ang ginagamit ay itaas.",
+    },
+    {
+      title: "Level 7",
+      instruction:
+        "Kagalang-galang na hardinero, ako ay hindi mapakali sa aking nakita. Isang tula na salita’t pahayag ay mahiwaga. Ang sabi nila’y ito’y kultural na pagpapahalaga, ano ba ang mensahe nito talaga?",
+      imageUrl: "/four/7.png",
+      roundType: "word",
+      answer: "Pagkakakilanlan",
+      hintText: "Tumingin ka sa salamin, sino ang iyong nakikita?",
+    },
+    {
+      title: "Level 8",
+      instruction:
+        "Naku, kagalang-galang na hardinero! Alam mo ba na mahina ako sa sipnayan, eh ito pa ang ibinigay na palaisipan, maaari mo ba akong tulungan?",
+      imageUrl: "/four/8.png",
+      roundType: "word",
+      answer: "Pag-aalaga ng Pamilya",
+      hintText: "Sino ang nasa bahay?",
+    },
+    {
+      title: "Level 9",
+      instruction:
+        "Kagalang-galang na hardinero, nais ko po sana kasing maglakbay at libutin ang Kanlurang Asya. Alin ba sa mga bansang ito ang napapabilang sa kanila?",
+      imageUrl: "/four/9.png",
+      roundType: "word",
+      answer: "Lebanon, Israel, Saudi Arabia, Jordan",
+      hintText: "Balikan ang aralin ninyo sa Araling Panlipunan.",
+    },
+    {
+      title: "Level 10",
+      instruction:
+        "Maraming salamat, kagalang-galang na hardinero. Tinulungan mo talaga ako ng makailang-beses gaya ng mga payo na ibinigay ni Inang Banga sa kanyang anak. Salamat nang dahil sa iyo ay natutuhan ko ang aral na ito:",
+      imageUrl: "/four/10.png",
+      roundType: "word",
+      answer: "Makinig sa Magulang",
+      hintText: "Tingnan lamang ang una at huli.",
     },
   ],
 };
