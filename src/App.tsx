@@ -1,4 +1,5 @@
 import "./App.css";
+import ReloadPrompt from "./components/reloadprompt/ReloadPrompt";
 import HintContextProvider from "./context/HintContextProvider";
 import RoundContextProvider from "./context/RoundContextProvider";
 import TimerContextProvider from "./context/TimerContextProvider";
@@ -10,6 +11,7 @@ function App() {
       <TimerContextProvider>
         <RoundContextProvider>
           <SelectionPage />
+          <ReloadPrompt />
         </RoundContextProvider>
       </TimerContextProvider>
     </HintContextProvider>

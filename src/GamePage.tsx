@@ -1,6 +1,5 @@
 import { Gamepad, Lightbulb, TimerReset, Trophy } from "lucide-react";
 import { useCallback, useContext, useEffect } from "react";
-import { registerSW } from "virtual:pwa-register";
 import RoundPage from "./components/RoundPage";
 import HintContext from "./context/hint-context";
 import RoundContext from "./context/round-context";
@@ -13,18 +12,6 @@ export default function GamePage() {
     useContext(RoundContext);
   const { hints } = useContext(HintContext);
   const { startTimer, secondsRemaining, stopTimer } = useContext(TimerContext);
-
-  const { openModal: openOfflineModal, ModalComponent: OfflineModal } =
-    useModal(
-      "base",
-      "Ready to be used offline",
-      "This app is now ready to be used offline. You can now close this tab and open this app again without internet connection.",
-      "Close",
-      () => {
-        window.onbeforeunload = null;
-        window.location.reload();
-      }
-    );
 
   const { openModal: openGameOverModal, ModalComponent } = useModal(
     "error",
@@ -60,18 +47,6 @@ export default function GamePage() {
       stopTimer();
     }
   }, [currentRound, rounds, stopTimer]);
-
-  useEffect(() => {
-    registerSW({
-      onOfflineReady() {
-        openOfflineModal();
-      },
-    });
-    window.onbeforeunload = function () {
-      return "Are you sure you want to leave?";
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div className="w-full px-2 md:px-4 lg:px-8">
@@ -138,7 +113,6 @@ export default function GamePage() {
       )}
 
       {ModalComponent}
-      {OfflineModal}
     </div>
   );
 }
