@@ -9,7 +9,7 @@ interface RoundType {
     "c"?: string;
     "d"?: string;
   }
-  answer: string | number | "a" | "b" | "c" | "d";
+  answer: string | number | "a" | "b" | "c" | "d" | Array<string>;
   title: string;
 }
 

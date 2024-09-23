@@ -11,7 +11,7 @@ import _ from "lodash";
 interface Props {
   data: RoundType;
   className?: string;
-  onSubmit?: (answer: any, correctAnswer: any) => boolean;
+  onSubmit?: (answer: any, correctAnswer: string[]) => boolean;
   type?: "word" | "number";
 }
 
@@ -34,8 +34,8 @@ export default function AnswerCard({ data, className }: Props) {
     setContent: setHintModalContent,
   } = useModal("primary", "Hint", data.hintText, "Close");
 
-  const onSubmit = (answer: any, correctAnswer: any): boolean => {
-    if (answer === correctAnswer) {
+  const onSubmit = (answer: any, correctAnswer: string[]): boolean => {
+    if (correctAnswer.includes(answer)) {
       openModal();
       new Audio("/correct.mp3").play();
       return true;
@@ -120,11 +120,17 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
         setAnswer(answer.slice(0, -1));
         return;
       }
-      if (
-        answer.length === (data.answer as string).replace(/[-,\s]/g, "").length
-      ) {
-        return;
+
+      if (typeof data.answer === "string") {
+        if (answer.length >= data.answer.length) {
+          return;
+        }
+      } else {
+        if (answer.length >= (data.answer as string[])[0].length) {
+          return;
+        }
       }
+
       setAnswer((prev) => prev + str);
     },
     [data.answer, answer]
@@ -133,10 +139,18 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
   const handleSubmit = useCallback(() => {
     if (onSubmit) {
       const cleanedAnswer = answer.replace(/[-,\s]/g, "").toLowerCase();
-      const cleanedDataAnswer = data.answer
-        .toString()
-        .replace(/[-,\s]/g, "")
-        .toLowerCase();
+
+      let cleanedDataAnswer: string[];
+
+      if (typeof data.answer === "string") {
+        cleanedDataAnswer = new Array(
+          data.answer.replace(/[-,\s]/g, "").toLowerCase()
+        );
+      } else {
+        cleanedDataAnswer = (data.answer as string[]).map((ans) =>
+          ans.replace(/[-,\s]/g, "").toLowerCase()
+        );
+      }
 
       const res = onSubmit(cleanedAnswer, cleanedDataAnswer);
       if (!res) {
@@ -148,7 +162,16 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
   }, [answer, data.answer, onSubmit, setIsError]);
 
   const RenderAnswer = (): React.ReactNode => {
-    const roundAnswerArray = (data.answer as string).toLowerCase().split("");
+    let roundAnswerArray: string[];
+
+    //if data.answer is either string or string[], if string [], get the first value
+
+    if (typeof data.answer === "string") {
+      roundAnswerArray = data.answer.split("");
+    } else {
+      roundAnswerArray = (data.answer as string[])[0].split("");
+    }
+
     const currentAnswerArray = answer.toLowerCase().split("");
 
     let answerIndexCounter = 0;
@@ -187,10 +210,6 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
           </span>
         );
       }
-
-      // if (value === currentAnswerArray[answerIndexCounter]) {
-      //   answerIndexCounter++;
-      // }
 
       return (
         <span
@@ -231,7 +250,7 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
 
   return (
     <div className={`s${className}`}>
-      <div className="flex gap-2 justify-center flex-wrap">
+      <div className="flex gap-2 justify-center flex-wrap max-h-[350px] overflow-y-scroll overflow-x-hidden">
         {<RenderAnswer />}
       </div>
 
@@ -317,7 +336,7 @@ function MultipleChoiceCard({ data, className, onSubmit }: Props) {
 
   const handleSubmit = useCallback(() => {
     if (onSubmit) {
-      const res = onSubmit(selectedChoice, data.answer);
+      const res = onSubmit(selectedChoice, [data.answer as string]);
       if (!res) {
         setIsError(10000);
         return;

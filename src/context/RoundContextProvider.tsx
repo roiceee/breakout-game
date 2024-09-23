@@ -15,7 +15,7 @@ export default function RoundContextProvider({
     rounds: [],
     description: "",
   });
-  const [currentRound, setCurrentRound] = useState(0);
+  const [currentRound, setCurrentRound] = useState(9);
 
   const setRound = (currentRound: number) => {
     if (currentRound < 0 || currentRound > rounds) {

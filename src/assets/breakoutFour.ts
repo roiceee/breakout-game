@@ -20,16 +20,16 @@ const breakoutFour: BreakoutType = {
         "Matagumpay! Kaso mayroon pang gumagambala sa akin. Kanino mo mahahalintulad ang estado ng buhay? Kasagutan ba ay maibibigay?",
       imageUrl: "/four/2.png",
       roundType: "word",
-      answer: "Banga at Metal",
+      answer: ["Banga at Metal", "Metal at banga"],
       hintText: "Ang isa ay maaaring marupok samantala ang isa ay matigas.",
     },
     {
       title: "Level 3",
       instruction:
-        "Ah yun pala yun? Isa pang katanungan, maaari mo bang sabihin sa akin kung ano ang mga elemento ng parabula? Tingnan mo pa rin sa baba.",
+        "Ah yun pala yun? Isa pang katanungan, maaari mo bang sabihin kung anong parabula ang isinasaad ng palaisipan na ito: “Sa aking makikilala ang mga bida’t kontrabida, maging ang lugar ng eksena. Anong elemento ako?",
       imageUrl: "/four/3.png",
       roundType: "word",
-      answer: "Panimula, Tauhan, Lunan, Banghay",
+      answer: "Banghay",
       hintText: "Kapag nakita na ang isa, makikita na ang iba.",
     },
     {
@@ -45,19 +45,19 @@ const breakoutFour: BreakoutType = {
     {
       title: "Level 5",
       instruction:
-        "Hindi pa ako tapos, kagalang-galang na hardinero. Pakiusap tulungan mo akong alamin ang literal at matalinghagang kahulugan ng mga salitang may kulay. Sa itaas ay literal, sa baba naman ang matalinghaga.",
+        "Caption: Hindi pa ako tapos, kagalang-galang na hardinero. Pakiusap tulungan mo akong alamin ang sinisimbolo ng mga tauhan na makikita sa ibaba.",
       imageUrl: "/four/5.png",
       roundType: "word",
-      answer: "Gawa sa lupa: Mahirap, Gawa sa porselana: Mayaman",
+      answer: "Estado ng buhay",
       hintText: "Tingnan ang kumpleksidad ng pagkakagawa sa kanila.",
     },
     {
       title: "Level 6",
       instruction:
-        "Kagalang-galang na hardinero, patulong naman ako sa pagsagot nito. Hindi raw kasi literal na kahulugan ang kanilang gusto, ang gusto nila’y yung matalinghaga.",
+        "Kagalang-galang na hardinero, patulong naman ako sa pagsagot nito. Ano ba nag tawag sa hindi literal na kahulugan?",
       imageUrl: "/four/6.png",
       roundType: "word",
-      answer: "Mapabigay, Pinaghirapan, Ina",
+      answer: "matalinghagang salita",
       hintText: "Kung sakaling nahihirapan, ang ginagamit ay itaas.",
     },
     {
@@ -84,7 +84,7 @@ const breakoutFour: BreakoutType = {
         "Kagalang-galang na hardinero, nais ko po sana kasing maglakbay at libutin ang Kanlurang Asya. Alin ba sa mga bansang ito ang napapabilang sa kanila?",
       imageUrl: "/four/9.png",
       roundType: "word",
-      answer: "Lebanon, Israel, Saudi Arabia, Jordan",
+      answer: "Bansa sa kanlurang Asya",
       hintText: "Balikan ang aralin ninyo sa Araling Panlipunan.",
     },
     {
