@@ -1,89 +1,88 @@
 import { BreakoutType } from "../types/round-type";
 
 const breakoutThree: BreakoutType = {
-  title: "Dula-UnawangSuri",
-  description: "Sa bawat lebel ng laro ay mayroong polybius square na kinakailangang gamitan ng pag-alam, pag-aanalisa, at pagsusuri. Basahin at unawain ang nakasaad na tanong sa laro.",
+  title: "Paglalakbay ng Pinagmulan ni Keloglan at ang Salita",
+  description: "Basahin at unawain ang nakasaad na pangungusap sa gilid at i-crack ang code upang makuha ang sagot. Maaring gumamit ng 3 hints lamang bilang magiging gabay sa pagtuklas ng sagot.",
   rounds: [
     {
       imageUrl: "/three/1.png",
-      instruction: "Si 44 51 32 54 42 24 33 ay isang batang siyam na taong gulang na lalaki na siyang pokus ng kwento. Sino si 44 51 32 54 42 24 33 at ano ang kanyang ginampanang papel sa dula?",
-      hintText: "Nagbibigay buhay ng dula.",
+      instruction: "Ito ang naging taglay na kapangyarihan ni Keloglan na kailanman ay hindi kayang maipakita ng kaniyang mga nakasalumuha.",
+      hintText: "Ugali ng isang bata kapag nakakitang may nasasaktan.",
       roundType: "word",
-      answer: "Tauhan",
+      answer: "Maawain",
       title: "Level 1"
     },
     {
       imageUrl: "/three/2.png",
-      instruction: "Ang kanyang gampanin sa dula ay hindi isang tagapanood lamang kundi siya rin ang nagsusuri sa script na isinulat. Alamin ang code at tukuyin kung sino at ano ang kanyang gampanin sa dula?",
-      hintText: "43 = S/O, V=15/51",
+      instruction: "Isa sa mga naipakita ng mga hayop ni Keloglan ay ang kaugaliang sapagkat ito ang nagpapatibay na siyang nagiging lakas ng bawat isa kapag nahaharap sa anong suliranin, pamilya man o kaibigan.",
+      hintText: "Kapag ang iyong kaibigan ay ibinahagi ang kaniyang sekreto at ang tanging magagawa mo lamang ay protektahan at huwag itong ibahagi sa iba.",
       roundType: "word",
-      answer: "Direktor",
+      answer: "Katapatan",
       title: "Level 2"
     },
     {
       imageUrl: "/three/3.png",
-      instruction: "Ito ang nagsisilbing bibliya ng isang dula na siyang naging gabay sa mga aktor.",
-      hintText: "11 = A, 31 = L",
+      instruction: "Ang mundo ay puno ng mga masasamang tao gayunpaman lahat tayo ay nakaranas nito kaya’t huwag nating gawin ito kagaya ni Keloglan na isang kalbo na hindi inaalintana ang kakayahan ng kaniyang mga kaibigan hayop.",
+      hintText: "Talamak na pangyayari sa isang tao sa kaniyang panlabas na anyo.",
       roundType: "word",
-      answer: "Iskrip",
+      answer: "Husgahan",
       title: "Level 3"
     },
     {
       imageUrl: "/three/4.png",
-      instruction: "Kawangis ng madilim na kalangitan ang nadarama ng magiting na mandirigmang naninimdim sa takbo ng kapalarang sinapit na nakatalungko sa isang sulok ng makipot na karima-rimarim na piitan.",
-      hintText: "Pinagganapan ng mga aktor sa isang dula.",
+      instruction: "Sabi nga nila ito ang pinakamainam na guro sapagkat kaya nitong makapagbago--- mabuti o masama. Kagaya ni Keloglan sa kaniyang paglalakbay at pagkakaroon ng Mahiwagang selyo, nanatili pa rin ang kaniyang kabutihan sapagkat alam niya kasi kaniya itong napagdaanan.",
+      hintText: "Kapag ika’y nasaktan sa isang pangyayari sa iyong buhay alam mo na ang gagawin sa kapag dumating ito muli.",
       roundType: "word",
-      answer: "Tanghalan",
+      answer: "Karanasan",
       title: "Level 4"
     },
     {
       imageUrl: "/three/5.png",
-      instruction: "Malayang tumawa, malungkot, magalit o iba pang ekspresyong sapagkat ang kanilang tungkulin ay sumaksi, sumuri, mangutya, at tumututok sa harap ng pagsasadula.",
-      hintText: "Ikaw at ang iyong pangkat ay hindi nagsasadula subalit kayo ay nagmamasid sa ginagawa ng ibang pangkat.",
+      instruction: "Sabi nga nila, “Bilang isang magulang, kailangan ibalik ng mga anak ang ginawang sakripisyo nila.” Subalit, yaong taon ang nakalilipas ay ‘tila nagbago na ito ngunit pinatutunayan ng mga hayop ni Keloglan na ito ang kanilang paraan upang maibalik ang kaniyang kabutihan sapagkat buhay nila ang nakataya noong sila ay nasa kapighatian.",
+      hintText: "Kalaban ng mga GenZ sa panahong ito. Iba ang obligasyon sa nagkukusang magbigay.",
       roundType: "word",
-      answer: "Manonood",
+      answer: "Utang na Loob",
       title: "Level 5"
     },
     {
       imageUrl: "/three/6.png",
-      instruction: "Temujin: “Itay ako ay masyado pang bata para sa bagay na iyan.” Sa isinaad ni Temujin na pagtutol ng paghahanap ng asawa, ano pa ang ibig ipagpakahulugan ng kanyang dayalogo?",
-      hintText: "Hindi pa handa sa anumang desisyon sa buhay.",
+      instruction: "Ang lahat ay mayroong pinagmulan, na maging ngayon pinag-aaralan ito. Kagaya lamang ng tanong “Ano ang nauna, manok o itlog?” subalit nalalaman natin ito dahil pinag-aaralan kagaya ng salita na ating ginagamit sa ating pang-araw-araw na pakikipagtalastasan.",
+      hintText: "Kasaysayn: may simula, may pagbabago, at pagwawakas sapagkat dinamiko--- nagbabago.",
       roundType: "word",
-      answer: "Hindi sigurado",
+      answer: "Etimolohiya",
       title: "Level 6"
     },
     {
       imageUrl: "/three/7.png",
-      instruction: "Temujin: “Pero darating ang panahon na tayo’y mamumuhay sa iisang bubong. Magkatuwang na aarugain ang ating mabubuting anak.” Sa isinaad ni Temujin kay Borte, ano ang ibig ipagpakahulugan ng kanyang dayalogo sa kanilang magiging buhay sa hinaharap?",
-      hintText: "Sa hirap at ginhawa, ito ang magiging buhay ng dalawa.",
+      instruction: "Humihikayat ng pagninilay sa ugnayan ng anyo ng mga salita (mga pagbabago sa panlapi, anyo ng pandiwa, at iba pa) sa iba't ibang lugar o grupo, at kung paano ito nauunawaan ng mga tagapagsalita ng wika sa kabila ng mga pagkakaibang ito.",
+      hintText: "Pagkakaiba-iba ng anyo ng mga salita sa iba't ibang rehiyon.",
       roundType: "word",
-      answer: "Buhay mag-asawa",
+      answer: "Morpolohikal",
       title: "Level 7"
     },
     {
       imageUrl: "/three/8.png",
-      instruction: "Yesugeii: “Ganung desidido ka na, sino ba ako para di-sumang-ayon sa iyong kagustuhan. Ang iyong buhay naman ang nakataya rito.”",
-      hintText: "Isang gawi na handa mong talikuran para sa ikabubuti ng lahat.",
+      instruction: "Ang ating buhay ay bahagi ng kasaysayan kagaya ng salitang “manggagawa”. Hindi naman ito nabuo na parang mahika na bigla na lamang lumitaw. Kaya ang mga “manggagawa” ay kilala sa kanilang mga obrang hinulma. Gayunpaman, nagbago na ang tawag sa kanila ngayon sa kasalukuyan.",
+      hintText: "Lugar sa Davao na hindi mo alam kung saan ang papasok at palabas.",
       roundType: "word",
-      answer: "Sakripisyo",
+      answer: "Obrero",
       title: "Level 8"
     },
     {
       imageUrl: "/three/9.png",
-      instruction: "Bakit mahalaga na mayroong mga elemento ang isang dula?",
+      instruction: "Natural na mangyayari ang isang bagay sa ating buhay kung ang ginawa ay kabutihan din. Ayon nga sa isang kasabihan, “What goes around, comes around” kagaya ni Keloglan at kaniyang mga kaibigang hayop laban sa matandang kumuha ng mahiwagang selyo.",
       roundType: "word",
-      answer: "Sa pamamagitan ng mga elemento ng dula ay mas naipakikilala ang kanilang gampanin sa kwento",
+      answer: "Ang kabutihang ginawa ay maibabalik ito sa hindi inaasahang pagkakataon",
       title: "Level 9"
     },
     {
       imageUrl: "/three/10.png",
-      instruction: "Patunayan kung ano ang temang kultural ang nakapaloob sa dulang Munting Pagsinta?",
+      instruction: "Naipakita ni Keloglan ang kahalagahan ng kabutihang asal kahit na magkaiba man ang pinagmulan niya at ang kaniyang kwento. Kaya bilang isang mag-aaral, mainam na maipakita ito kahit na magkaiba man ang kinagisnang kultura.",
       roundType: "word",
-      answer: "Pagpapanatili ng konserbatibong kultura sa pagpapakasal at pag-aanak",
+      answer: "Pag-unawa at pagpapahalaga sa mga akdang pampanitikang ng Kanlurang Asya",
       title: "Level 10"
     }
   ]
 };
-
 
 export default breakoutThree;
