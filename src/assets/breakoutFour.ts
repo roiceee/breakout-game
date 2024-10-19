@@ -26,10 +26,10 @@ const breakoutFour: BreakoutType = {
     {
       title: "Level 3",
       instruction:
-        "Ah yun pala yun? Isa pang katanungan, maaari mo bang sabihin kung anong parabula ang isinasaad ng palaisipan na ito: “Sa aking makikilala ang mga bida’t kontrabida, maging ang lugar ng eksena. Anong elemento ako?",
+        "Ah yun pala yun? Isa pang katanungan, maaari mo bang sabihin sa akin kung ano ang mga elemento ng parabula? Tingnan mo pa rin sa baba",
       imageUrl: "/four/3.png",
       roundType: "word",
-      answer: "Banghay",
+      answer: "Panimula, Tauhan, Lunan, Banghay",
       hintText: "Kapag nakita na ang isa, makikita na ang iba.",
     },
     {

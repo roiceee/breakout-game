@@ -1,5 +1,3 @@
-import breakoutOne from "./assets/breakoutOne";
-import breakoutTwo from "./assets/breakoutTwo";
 import breakoutThree from "./assets/breakoutThree";
 import breakoutFour from "./assets/breakoutFour";
 import breakoutFive from "./assets/breakoutFive";
@@ -29,22 +27,6 @@ export default function SelectionPage() {
           <h1 className="text-xl font-bold">Piliin ang uri ng Breakout Game na iyong nais laruin.</h1>
           <div className="flex flex-col gap-4 mt-8">
             {/* render buttons */}
-            <button
-              className="btn btn-secondary text-lg"
-              onClick={() => {
-                selectBreakoutGame(breakoutOne);
-              }}
-            >
-              {breakoutOne.title}
-            </button>
-            <button
-              className="btn btn-secondary text-lg"
-              onClick={() => {
-                selectBreakoutGame(breakoutTwo);
-              }}
-            >
-              {breakoutTwo.title}
-            </button>
             <button
               className="btn btn-secondary text-lg"
               onClick={() => {
