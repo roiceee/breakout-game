@@ -250,7 +250,7 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
 
   return (
     <div className={`s${className}`}>
-      <div className="flex gap-2 justify-center flex-wrap max-h-[350px] overflow-y-auto overflow-x-hidden">
+      <div className="flex gap-2 justify-center flex-wrap max-h-[350px] overflow-y-scroll overflow-x-hidden">
         {<RenderAnswer />}
       </div>
 
