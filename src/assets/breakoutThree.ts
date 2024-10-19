@@ -79,7 +79,7 @@ const breakoutThree: BreakoutType = {
       imageUrl: "/three/10.png",
       instruction: "Naipakita ni Keloglan ang kahalagahan ng kabutihang asal kahit na magkaiba man ang pinagmulan niya at ang kaniyang kwento. Kaya bilang isang mag-aaral, mainam na maipakita ito kahit na magkaiba man ang kinagisnang kultura.",
       roundType: "word",
-      answer: "Pag-unawa at pagpapahalaga sa mga akdang pampanitikang ng Kanlurang Asya",
+      answer: "Pag-unawa at pagpapahalaga sa mga akdang pampanitikan ng Kanlurang Asya",
       title: "Level 10"
     }
   ]
