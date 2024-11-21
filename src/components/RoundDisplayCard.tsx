@@ -10,7 +10,7 @@ export default function RoundDisplayCard({
   const { currentRound, roundsData } = useContext(RoundContext);
 
   return (
-    <div className={`w-full ${className}`}>
+    <div className={`${className}`}>
       <div className="flex gap-2 flex-wrap mx-auto justify-center ">
         {roundsData.rounds.map((value, index) => {
           return (
@@ -24,22 +24,22 @@ export default function RoundDisplayCard({
                 index + 1 < currentRound
                   ? " bg-base-300 text-base-content opacity-60"
                   : ""
-              } border-2 rounded-full w-12 h-12 flex justify-center items-center select-none`}
+              } border-2 rounded-full w-10 h-10 flex justify-center items-center select-none`}
             >
               {index + 1 === roundsData.rounds.length ? (
-                <LockKeyholeIcon />
+                <LockKeyholeIcon size={20} />
               ) : (
                 <></>
               )}
               {index + 1 !== roundsData.rounds.length &&
               value.roundType === "word" ? (
-                <WholeWord />
+                <WholeWord size={20}/>
               ) : (
                 <></>
               )}
               {index + 1 !== roundsData.rounds.length &&
               value.roundType === "multiple-choice" ? (
-                <CircleDot />
+                <CircleDot size={20}/>
               ) : (
                 <></>
               )}

@@ -70,14 +70,10 @@ export default function AnswerCard({ data, className }: Props) {
 
   return (
     <div
-      className={`card border-2 shadow-lg w-full sm:w-[600px] md:w-[700px] mx-auto ${className}`}
+      className={`pb-2 w-full mx-auto ${className}`}
     >
-      <div className="card-body">
-        <h2 className="card-title my-2">{data.title}</h2>
-
-        <p>{data.instruction}</p>
-
-        <div className="flex items-center gap-3 justify-end mb-4">
+      <div >
+        <div className="flex items-center gap-3 justify-center mb-4">
           <span>
             Natitirang Hints: <span className="font-bold">{hints}</span>
           </span>
@@ -256,7 +252,7 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
 
       {/* Render a-z keys, capital letters */}
       {type === "word" && (
-        <div className="flex gap-2 justify-center flex-wrap mt-10">
+        <div className="hidden gap-2 justify-center flex-wrap mt-10">
           {Array.from({ length: 26 }, (_, i) =>
             String.fromCharCode(65 + i)
           ).map((char) => (
@@ -285,7 +281,7 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
 
       {/* Render 0-9 keys */}
       {type === "number" && (
-        <div className="flex gap-2 justify-center flex-wrap mt-10">
+        <div className="hidden gap-2 justify-center flex-wrap mt-10">
           {Array.from({ length: 10 }, (_, i) => i).map((num) => (
             <button
               key={num}

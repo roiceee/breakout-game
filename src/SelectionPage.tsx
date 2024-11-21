@@ -18,7 +18,7 @@ export default function SelectionPage() {
 
   return (
     <main
-      className=" min-h-screen pb-2 font-body"
+      className=" min-h-screen max-h-screen pb-2 font-body"
       style={{ backgroundImage: "url(/pattern.webp)" }}
     >
       <Navbar className="mb-6" />

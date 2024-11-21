@@ -1,17 +1,23 @@
-import {RoundType} from "../types/round-type";
+import { RoundType } from "../types/round-type";
 import AnswerCard from "./AnswerCard";
-import RoundDisplayCard from "./RoundDisplayCard";
+import InstructionCard from "./InstructionCard";
 
 export default function RoundPage({ data }: { data: RoundType }) {
   return (
-    <div className="xl:flex items-start justify-center xl:gap-10">
-      <div className="card border-2 shadow-lg w-full sm:w-[600px] md:w-[700px] xl:w-[1000px] mx-auto xl:mx-0 bg-base-100">
-        <div className="card-body">
-          <img src={data.imageUrl} className=" w-full h-auto mx-auto" />
-          <RoundDisplayCard className="my-2" />
+    <div className="flex flex-col items-center gap-2">
+      <div className="xl:flex items-start justify-center xl:gap-2 w-full">
+        <div className="card border-2 shadow-lg w-2/3 mx-auto xl:mx-0 bg-base-100">
+          <div className="card-body p-2 flex-row justify-center">
+            <img src={data.imageUrl} className="max-h-[60vh] mx-auto w-auto " />
+          </div>
+
+          <AnswerCard
+            className="mt-2"
+            data={data}
+          />
         </div>
+        <InstructionCard data={data} className="w-1/3" />
       </div>
-      <AnswerCard className="mt-4 xl:mt-0 xl:mx-0 bg-base-100" data={data} />
     </div>
   );
 }
