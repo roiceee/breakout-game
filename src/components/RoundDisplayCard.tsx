@@ -24,22 +24,22 @@ export default function RoundDisplayCard({
                 index + 1 < currentRound
                   ? " bg-base-300 text-base-content opacity-60"
                   : ""
-              } border-2 rounded-full w-10 h-10 flex justify-center items-center select-none`}
+              } border-2 rounded-full w-12 h-12 flex justify-center items-center select-none`}
             >
               {index + 1 === roundsData.rounds.length ? (
-                <LockKeyholeIcon size={20} />
+                <LockKeyholeIcon size={26} />
               ) : (
                 <></>
               )}
               {index + 1 !== roundsData.rounds.length &&
               value.roundType === "word" ? (
-                <WholeWord size={20}/>
+                <WholeWord size={26}/>
               ) : (
                 <></>
               )}
               {index + 1 !== roundsData.rounds.length &&
               value.roundType === "multiple-choice" ? (
-                <CircleDot size={20}/>
+                <CircleDot size={26}/>
               ) : (
                 <></>
               )}

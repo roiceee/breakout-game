@@ -18,7 +18,7 @@ export default function InstructionCard({ data, className }: Props) {
         <RoundDisplayCard className="m-2 w-fit mx-auto" />
         <h2 className="card-title my-2">{data.title}</h2>
 
-        <p>{data.instruction}</p>
+        <p className="text-xl">{data.instruction}</p>
       </div>
     </div>
   );
