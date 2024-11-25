@@ -73,8 +73,8 @@ export default function AnswerCard({ data, className }: Props) {
       className={`pb-2 w-full mx-auto ${className}`}
     >
       <div >
-        <div className="flex items-center gap-3 justify-center mb-4">
-          <span>
+        <div className="flex items-center gap-3 justify-center my-4">
+          <span className="text-lg">
             Natitirang Hints: <span className="font-bold">{hints}</span>
           </span>
           <button
