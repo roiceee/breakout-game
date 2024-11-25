@@ -2,6 +2,7 @@ import { BreakoutType } from "../types/round-type";
 
 const breakoutFive: BreakoutType = {
   title: "ORAma’t SitaNa",
+  videoUrl: "/videos/1.mp4",
   description:
     "Basahin at unawain ang nakasaad na pangungusap sa gilid at i-crack ang code ng orasan upang makuha ang sagot. Ang mga numero ay may katumbas na letra mula sa mga oras ng orasan. Pagtumbasin ang numero at letra. Maaring gumamit ng 3 hints lamang bilang magiging gabay sa pagtuklas ng sagot.",
   rounds: [

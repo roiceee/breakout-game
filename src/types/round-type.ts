@@ -16,6 +16,7 @@ interface RoundType {
 interface BreakoutType {
   title: string;
   description: string;
+  videoUrl: string;
   rounds: RoundType[];
 }
 

@@ -2,6 +2,7 @@ import { BreakoutType } from "../types/round-type";
 
 const breakoutFour: BreakoutType = {
   title: "Ang Hardinero at ang Banga",
+  videoUrl: "/videos/1.mp4",
   description:
     "Maligayang pagdating, kagalang-galang na hardinero!]\nTulungan mo ang anak na banga na tandaan ang mga payo na ibiliin ng kanyang ina. Sa pamamagitan ng mga crossword puzzles, picture analysis, at poetry analysis, tuklasin natin ang mahiwagang mundo ng mga banga na puno ng hiwaga.",
   rounds: [

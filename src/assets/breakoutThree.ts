@@ -3,6 +3,7 @@ import { BreakoutType } from "../types/round-type";
 const breakoutThree: BreakoutType = {
   title: "Paglalakbay ng Pinagmulan ni Keloglan at ang Salita",
   description: "Basahin at unawain ang nakasaad na pangungusap sa gilid at i-crack ang code upang makuha ang sagot. Maaring gumamit ng 3 hints lamang bilang magiging gabay sa pagtuklas ng sagot.",
+  videoUrl: "/videos/1.mp4",
   rounds: [
     {
       imageUrl: "/three/1.png",
