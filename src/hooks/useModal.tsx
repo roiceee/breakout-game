@@ -56,15 +56,15 @@ function useModal(
       {isOpen && (
         <dialog id="my_modal_1" className="modal" open>
           <div
-            className={`modal-box ${
+            className={`modal-box border-4 ${
               type === "primary"
-                ? "bg-primary text-primary-content"
+                ? "border-primary"
                 : type === "success"
-                ? "bg-success text-success-content"
+                ? "border-success"
                 : type === "error"
-                ? "bg-error text-error-content"
+                ? "border-error"
                 : type === "base"
-                ? "bg-base-100 text-base-content"
+                ? "text-base-content"
                 : ""
             }`}
           >
@@ -72,7 +72,21 @@ function useModal(
             <p className="py-4">{modalContent.message}</p>
             <div className="modal-action">
               {/* Button to close the modal */}
-              <button className="btn" onClick={closeModal}>
+              <button
+                className={`btn ${
+                  type === "primary"
+                    ? "btn-primary"
+                    : type === "success"
+                    ? "btn-success"
+                    : type === "error"
+                    ? "btn-error"
+                    : type === "base"
+                    ? "btn-base"
+                    : ""
+                }
+              }`}
+                onClick={closeModal}
+              >
                 {modalContent.buttonText}
               </button>
             </div>
