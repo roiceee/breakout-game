@@ -51,13 +51,29 @@ export default function GamePage() {
   return (
     <div className="w-full px-2 md:px-4 lg:px-8">
       {currentRound === 0 && (
-        <div className="card bg-base-100 border-primary border-2 min-w-[300px] max-w-[600px] mx-auto md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+        <div className="card bg-base-100 border-primary border-2 min-w-[300px] max-w-[1000px] mx-auto md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <div className="card-body">
             <h2 className="card-title mx-auto">{roundsData.title}</h2>
-            <p>{roundsData.description}</p>
+
+            {/* Greetings */}
+            <div className="mt-4">
+              <p>{roundsData.greetings}</p>
+            </div>
+
+            {/* Objective */}
+            <div className="mt-4">
+              <h3 className="font-bold text-lg">Layunin:</h3>
+              <p>{roundsData.objective}</p>
+            </div>
+
+            <div className="mt-4">
+              <h3 className="font-bold text-lg">Panuto:</h3>
+              <p>{roundsData.description}</p>
+            </div>
+
+            {/* Instructions */}
             <ul className="px-5 mt-4">
               <li className="font-bold list-disc">Mayroon kang 3 hints</li>
-
               <li className="list-disc">
                 Kung maubos ang oras ay hindi na maaaring magpatuloy pa
               </li>
@@ -66,12 +82,27 @@ export default function GamePage() {
                 <span className="font-bold">"Handa kana ba"</span>
               </li>
             </ul>
+
+            {/* Action Button */}
             <div className="card-actions justify-center">
-              <button className="btn btn-primary btn-wide text-lg mt-4" onClick={play}>
+              <button
+                className="btn btn-primary btn-wide text-lg mt-4"
+                onClick={play}
+              >
                 Handa na ako
               </button>
             </div>
-            <p className=" underline text-blue-500 text-right"><a href="/videos/1.mp4" target="_blank">Panuorin ang video</a></p>
+
+            {/* Video Link */}
+            <p className="underline text-blue-500 text-right mt-4">
+              <a
+                href={roundsData.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Panuorin ang video
+              </a>
+            </p>
           </div>
         </div>
       )}

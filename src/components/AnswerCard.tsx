@@ -25,7 +25,8 @@ export default function AnswerCard({ data, className }: Props) {
     "Tumpak!",
     "Pinduton ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
     "Magpatuloy",
-    nextRound
+    data.explanation,
+    nextRound,
   );
 
   const {
@@ -69,10 +70,8 @@ export default function AnswerCard({ data, className }: Props) {
   }, [data.hintText, setHintModalContent]);
 
   return (
-    <div
-      className={`pb-2 w-full mx-auto ${className}`}
-    >
-      <div >
+    <div className={`pb-2 w-full mx-auto ${className}`}>
+      <div>
         <div className="flex items-center gap-3 justify-center my-4">
           <span className="text-lg">
             Natitirang Hints: <span className="font-bold">{hints}</span>

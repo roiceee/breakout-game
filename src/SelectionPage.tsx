@@ -28,7 +28,7 @@ export default function SelectionPage() {
           <div className="flex flex-col gap-4 mt-8">
             {/* render buttons */}
             <button
-              className="btn btn-secondary text-lg"
+              className="btn btn-secondary text-lg btn-lg"
               onClick={() => {
                 selectBreakoutGame(breakoutThree);
               }}
@@ -36,7 +36,7 @@ export default function SelectionPage() {
               {breakoutThree.title}
             </button>
             <button
-              className="btn btn-secondary text-lg"
+              className="btn btn-secondary text-lg btn-lg"
               onClick={() => {
                 selectBreakoutGame(breakoutFour);
               }}
@@ -44,7 +44,7 @@ export default function SelectionPage() {
               {breakoutFour.title}
             </button>
             <button
-              className="btn btn-secondary text-lg"
+              className="btn btn-secondary text-lg btn-lg"
               onClick={() => {
                 selectBreakoutGame(breakoutFive);
               }}

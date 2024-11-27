@@ -11,12 +11,15 @@ interface RoundType {
   }
   answer: string | number | "a" | "b" | "c" | "d" | Array<string>;
   title: string;
+  explanation: string;
 }
 
 interface BreakoutType {
   title: string;
   description: string;
   videoUrl: string;
+  greetings: string;
+  objective: string
   rounds: RoundType[];
 }
 

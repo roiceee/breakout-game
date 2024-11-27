@@ -9,6 +9,7 @@ function useModal(
   title?: string,
   message?: string,
   buttonText?: string,
+  explanation?: string,
   onClose?: () => void
 ) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -56,7 +57,7 @@ function useModal(
       {isOpen && (
         <dialog id="my_modal_1" className="modal" open>
           <div
-            className={`modal-box border-4 ${
+            className={`modal-box max-w-[1000px] border-4 ${
               type === "primary"
                 ? "border-primary"
                 : type === "success"
@@ -69,7 +70,12 @@ function useModal(
             }`}
           >
             <h3 className="font-bold text-lg">{modalContent.title}</h3>
-            <p className="py-4">{modalContent.message}</p>
+            {explanation && (
+              <div>
+                <p className="font-bold">Pagpapaliwanag:</p> <p>{explanation}</p>
+              </div>
+            )}
+            <p className="py-4 font-bold">{modalContent.message}</p>
             <div className="modal-action">
               {/* Button to close the modal */}
               <button
