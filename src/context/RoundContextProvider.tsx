@@ -14,6 +14,9 @@ export default function RoundContextProvider({
     title: "",
     rounds: [],
     description: "",
+    greetings: "",
+    objective: "",
+    videoUrl: "",
   });
   const [currentRound, setCurrentRound] = useState(0);
 

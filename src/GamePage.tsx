@@ -18,6 +18,7 @@ export default function GamePage() {
     "Game Over",
     "Naubos na ang iyong oras. Pindutin ang button para maglaro muli.",
     "Maglaro muli",
+    "",
     () => {
       window.onbeforeunload = null;
       window.location.reload();
