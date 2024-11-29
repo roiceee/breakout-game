@@ -137,7 +137,7 @@ const breakoutFour: BreakoutType = {
       answer: "MALAMAN ANG PAGGAMIT AT KAHULUGAN NITO NOON HANGGANG NGAYON.",
       title: "Antas 11",
       explanation:
-        "Ang wika ay dinamiko at hindi ito tumitigil sa isang punto lamang. Kung kaya't, mahalaga na malaman natin ang pinagmulan ng mga salita upang mas malinaw nating maunawaan kung paano ito ginamit noon at paano natin ito ginagamit sa kasalukuyan.",
+        "Ang wika ay dinamiko at hindi ito tumitigil sa isang punto lamang. Kung kaya't, mahalaga na malaman natin ang pinagmulan ng mga salita upang mas malinaw nating maunawaan kung paano ito ginamit noon at paano natin ito ginagamit sa kasalukuyan",
     },
     {
       imageUrl: "/four/12.png",

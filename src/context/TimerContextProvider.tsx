@@ -7,7 +7,7 @@ export default function TimerContextProvider({
   children: React.ReactNode
 }) {
   // Default time is 10 minutes (600 seconds)
-  const [secondsRemaining, setSecondsRemaining] = useState(600);
+  const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const setTime = (seconds: number) => {

@@ -31,7 +31,7 @@ const breakoutThree: BreakoutType = {
       instruction:
         "Hinuhubog ng parabula ang _________ at __________ na pagkatao ng isang tagapakinig.",
       hintText:
-        "Kapag ang iyong kaibigan ay ibinahagi ang kaniyang sekreto at ang tanging magagawa mo lamang ay protektahan at huwag itong ibahagi sa iba.",
+        "Pagbabago ng tao sa panloob at panlabas.",
       roundType: "word",
       answer: "moral at espiritwal",
       title: "Antas 2",
@@ -114,7 +114,7 @@ const breakoutThree: BreakoutType = {
       roundType: "word",
       title: "Antas 9",
       explanation:
-        "Unti-unting lumubog ang anak na banga sa lawa dahil sa pagsuway nito sa utos ng kaniyang ina. Alam ng mga magulang kung ano ang makabubuti para sa kanilang mga anak.",
+        "Unti-unting lumubog ang anak na banga sa lawa dahil sa pagsuway nito sa utos ng kaniyang ina. Alam ng ating mga ina kung ano ang ikabubuti ng kanilang mga anak para sa kanila sapagkat alam na nila ang mangyayari rito. Ang inang banga bilang Poong Maykapal ay nagbibigay ng paalala sa ating buhay upang hindi tayo mapahamak subalit tayo bilang anak na banga o anak ng Diyos ay minsang sumusuway na nagdudulot ng kapahamakan na minsan ito ang magdadala ng aral at minsan kamatayan sa hindi pagsunod nito na siyang pagsisi sa huli.",
     },
     {
       imageUrl: "/three/10.png",
@@ -143,7 +143,7 @@ const breakoutThree: BreakoutType = {
       instruction:
         "Bakit kinakailangan na alamin ang nakatagong mensahe sa parabula?",
       answer:
-        "TANGKILIKIN ANG MENSAHE NG DIYOS UPANG MAPATIBAY ANG ISPIRITWAL NA PANINIWALA AT MAPAUNLAD ANG KRITIKAL NA PAG-IISIP SA BUHAY.",
+        "TANGKILIKIN ANG MENSAHE NG DIYOS UPANG MAPATIBAY ANG ISPIRITWAL NA PANINIWALA AT MAPAUNLAD ANG KRITIKAL NA PAG-IISIP SA BUHAY",
       hintText: undefined,
       roundType: "word",
       title: "Konklusyon",

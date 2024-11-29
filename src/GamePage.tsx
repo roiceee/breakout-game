@@ -134,7 +134,9 @@ export default function GamePage() {
               <button
                 className="btn"
                 onClick={() => {
-                  window.onbeforeunload = null;
+                  window.onbeforeunload = function () {
+                    return "Are you really want to perform the action?";
+                  };
                   window.location.reload();
                 }}
               >

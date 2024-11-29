@@ -118,13 +118,14 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/10.png",
       instruction:
-        "Ito ang epikong ipinagmamalaki ng mga taga-India at ang matagumpay na pagsasakatuparan ni Rama. Paano ipinakita ni Rama ang hindi pagtanggap sa mga pagsubok?",
-      hintText: "Pagmamahal ng isang tao lamang.",
+        "Anong kahalagahang kulturang ipinapakita ng epiko sa pagpapalaganap ng kulturang Asyano?",
+      hintText: "Nagbibigay ng katangi-tanging aspekto ng tao.",
       roundType: "word",
-      answer: "RAMAYANA",
+      answer:
+        "PAGTANGGAP SA PAGKAKAIBA NG PANINIWALANG HINDUISMO SA KULTURANG KINAGISNAN",
       title: "Konklusyon",
       explanation:
-        "Ang Ramayana ay isang epiko na may dakilang aral para sa mga taga-India na nagpapakita ng katapangan at pagmamahal. Mahalaga ito para sa kanila dahil ito ay nagpapakita ng halimbawa ng pag-aalaga, pagtatanggol, at pagtanggap sa mga pagsubok ng buhay.",
+        "Hindi lamang umiinog sa iisang paniniwala o kultura ang ating daigdig na ginagalawan sapagkat maraming mga bagay ang nagiging dahilan kung bakit ito ang humuhubog sa ating pagkatao. Bilang bahagi ng lipunan, nararapat na unawain natin ang pagkakaiba ng paniniwala at kultura ng ibang bansa sapagkat ito ang nagbibigay sa kanilang ng katauhan upang maging mabuting tao sa mundo.",
     },
   ],
 };
