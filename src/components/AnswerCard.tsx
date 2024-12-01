@@ -26,7 +26,7 @@ export default function AnswerCard({ data, className }: Props) {
     "Pindutin ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
     "Magpatuloy",
     data.explanation,
-    nextRound,
+    nextRound
   );
 
   const {
@@ -159,8 +159,7 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
   const RenderAnswer = (): React.ReactNode => {
     let roundAnswerArray: string[];
 
-    //if data.answer is either string or string[], if string [], get the first value
-
+    // Check if data.answer is a string or a string array
     if (typeof data.answer === "string") {
       roundAnswerArray = data.answer.split("");
     } else {
@@ -168,53 +167,60 @@ function InputAnswerCard({ data, className, onSubmit, type }: Props) {
     }
 
     const currentAnswerArray = answer.toLowerCase().split("");
-
     let answerIndexCounter = 0;
 
-    return roundAnswerArray.map((value, index) => {
-      if (value === " ") {
-        return <span key={`space-${index}`} className="w-8" />;
-      }
-      if (value === "-") {
-        return (
-          <span
-            key={`hyphen-${index}`}
-            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
-          >
-            -
-          </span>
-        );
-      }
-      if (value === ":") {
-        return (
-          <span
-            key={`colon-${index}`}
-            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
-          >
-            :
-          </span>
-        );
-      }
-      if (value === ",") {
-        return (
-          <span
-            key={`comma-${index}`}
-            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
-          >
-            ,
-          </span>
-        );
-      }
+    // Array to hold JSX elements
+    const elements: React.ReactNode[] = [];
+    // Array to hold consecutive non-space characters
+    let consecutiveChars: string[] = [];
 
-      return (
-        <span
-          key={`${value}-answer-${index}`}
-          className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
-        >
-          {_.upperCase(currentAnswerArray[answerIndexCounter++])}
-        </span>
-      );
+    // Function to push consecutive characters into the elements array
+    const pushConsecutiveChars = () => {
+      if (consecutiveChars.length > 0) {
+        elements.push(
+          <div key={`group-${elements.length}`} className="flex space-x-2">
+            {consecutiveChars.map((char, index) => (
+              <span
+                key={`${char}-answer-${index}`}
+                className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl"
+              >
+                {_.upperCase(char)}
+              </span>
+            ))}
+          </div>
+        );
+        consecutiveChars = []; // Reset for next group
+      }
+    };
+
+    roundAnswerArray.forEach((value, index) => {
+      if (value === " ") {
+        // Push any collected consecutive characters first
+        pushConsecutiveChars();
+        // Add a space span
+        elements.push(<span key={`space-${index}`} className="w-8" />);
+      } else if (value === "-" || value === ":" || value === ",") {
+        // Push any collected consecutive characters first
+        pushConsecutiveChars();
+        // Add special characters
+        elements.push(
+          <span
+            key={`${value}-${index}`}
+            className="border-2 rounded-full w-16 h-16 flex justify-center items-center font-bold text-2xl text-gray-400"
+          >
+            {value}
+          </span>
+        );
+      } else {
+        // Collect consecutive non-space characters
+        consecutiveChars.push(currentAnswerArray[answerIndexCounter++]);
+      }
     });
+
+    // Push any remaining consecutive characters after the loop
+    pushConsecutiveChars();
+
+    return elements;
   };
 
   useEffect(() => {
