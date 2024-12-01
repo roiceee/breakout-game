@@ -66,18 +66,18 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/5.png",
       instruction:
-        "Anong sanhi ng pagbabago ng Emperor batay sa teksto nasa ibaba, Mula sa pangyayaring, Kung nais mong pakasalan ang aking anak, kailangan mo munang magpatayo ng isang palasyo sa tabi ng aking palasyo. Hanggang sa naging, Nang makita ng Emperor ang isang magandang palasyo, sumang-ayon siya at ikinasal siya sa prinsesa sa mismong araw na iyon.",
+        "Anong sanhi ng pagbabago ng Emperor batay sa teksto: <b>Mula sa pangyayaring, Kung nais mong pakasalan ang aking anak, kailangan mo munang magpatayo ng isang palasyo sa tabi ng aking palasyo. Hanggang sa naging, Nang makita ng Emperor ang isang magandang palasyo, sumang-ayon siya at ikinasal siya sa prinsesa sa mismong araw na iyon.</b>",
       hintText: "Pagtupad sa kahilingan nito.",
       roundType: "word",
       answer: "PAGSANG-AYON SA KASUNDUAN",
       title: "Antas 5",
       explanation:
-        "Bilang isang magulang lalo na kung mayroong anak na babae ay nanaisin nitong mapunta ang kaniyang dalaga sa mabuting kamay. Batay sa kuwento, ang Emperor ay mayroong pinakamamahal na anak na babae kaya sa mga kalalakihang ninanais na makuha ang kamay ng kaniyang anak ay dadaan muna sa kinakailangan kasunduan upang makamit ito.",
+        "Bilang isang magulang lalo na kung mayroong anak na babae ay nanaisin nitong mapunta ang kaniyang dalaga sa mabuting kamay. Batay sa kuwento, ang Emperor ay mayroong pinakamamahal na anak na babae kaya sa mga kalalakihang ninanais na makuha ang kamay ng kaniyang anak ay dadaan muna sa kinakailangan kasunduan upang makamit ito. Sa tunay na buhay, ipinapakita nito na ang lalaki ay nararapat na ibigay ang mga kakailanganin ng kaniyang magiging kabiyak noong siya ay nasa poder pa ng kaniyang mga magulang. Walang magulang ang gustong mapunta ang anak sa isang sitwasyon na iba sa kaniyang kinalakihan.",
     },
     {
       imageUrl: "/four/6.png",
       instruction:
-        "Anong sanhi ng pagbabago ng Emperor batay sa teksto nasa ibaba, Mula sa pangyayaring, Nang makita ng Emperor na ang palasyo ay nawala, binawi niya ang kaniyang anak na babae at nangako na hindi ito makakasama ng kaniyang asawa kung hindi niya ito mabibigyan ng magandang buhay. Hanggang sa naging, Nang makita ang pagbalik ng palasyo, sumang-ayon ang Emperor na ang kaniyang anak na babae ay maaaring muling manirahan kasama si Keloglan.",
+        "Anong sanhi ng pagbabago ng Emperor batay sa teksto, <p><b>Mula sa pangyayaring, Nang makita ng Emperor na ang palasyo ay nawala, binawi niya ang kaniyang anak na babae at nangako na hindi ito makakasama ng kaniyang asawa kung hindi niya ito mabibigyan ng magandang buhay.</b></p> Hanggang sa naging, <p><b>Nang makita ang pagbalik ng palasyo, sumang-ayon ang Emperor na ang kaniyang anak na babae ay maaaring muling manirahan kasama si Keloglan.</b></p>",
       hintText: "Pagbalik ng palasyo",
       roundType: "word",
       answer: "PAGTUPAD MULI SA PANGAKO",
@@ -134,7 +134,7 @@ const breakoutFour: BreakoutType = {
       instruction: "Bakit kinakailangang matuklasan ang pinagmulan ng salita?",
       hintText: "Pamamaraan at mensahe ng salita.",
       roundType: "word",
-      answer: "MALAMAN ANG PAGGAMIT AT KAHULUGAN NITO NOON HANGGANG NGAYON.",
+      answer: "MALAMAN ANG PAGGAMIT AT KAHULUGAN NITO NOON HANGGANG NGAYON",
       title: "Antas 11",
       explanation:
         "Ang wika ay dinamiko at hindi ito tumitigil sa isang punto lamang. Kung kaya't, mahalaga na malaman natin ang pinagmulan ng mga salita upang mas malinaw nating maunawaan kung paano ito ginamit noon at paano natin ito ginagamit sa kasalukuyan",

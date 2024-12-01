@@ -91,7 +91,7 @@ const breakoutFive: BreakoutType = {
       answer: "REINCARNATION",
       title: "Antas 7",
       explanation:
-        "Sa paniniwala ng mga India sa Hinduismo ang pagsunog sa katawan ng namayapa ay maaaring mabuhay muli sila sa susunod na pagkakataon. Maraming mga pagdarasal ang isinagawa ang mga Hindu para sa namayapa. Naniniwala ang Hindu na kapag namatay ang tao ay magkakaroon muli ng panibagong buhay na parang isang cycle na mamatay at muling mabubuhay sa pamamagitan ng cremation.",
+        "Sa paniniwala ng mga India sa Hinduismo ang pagsunog sa katawan ng namayapa ay maaaring mabuhay muli sila sa susunod na pagkakataon. Maraming mga pagdarasal ang isinagawa ang mga Hindu para sa namayapa. Naniniwala ang Hindu na kapag namatay ang tao ay magkakaroon muli ng panibagong buhay na parang isang cycle na mamatay at muling mabubuhay sa pamamagitan ng cremation. Kabaliktaran sa paniniwalang kultura na nanaig sa Pilipinas; sa aspekto ng Kristiyanismo kapag namatay na ang tao anuman ang paraan ng paglibing nito naniniwala sila na ang susunod na buhay ay sa langit kasama ang Poong Maykapal, ang ibang paniniwalang Kristiyanismo naman ay kapag namatay ay mapupunta muna sa purgatoryo upang timbangin ang kabutihan at kasamaan noong sila ay nabubuhay pa lamang. Sa paniniwalang Islam, kapag namatay ang isang Muslim ay hindi nila ito inilalagay sa kabaong subalit binabalot nila ang malinis na katawan sa isang puting tela mula ulo hanggang paa maliban sa mukha.",
     },
     {
       imageUrl: "/five/8.png",
@@ -102,7 +102,7 @@ const breakoutFive: BreakoutType = {
       answer: "KARMA",
       title: "Antas 8",
       explanation:
-        "Ang karma ay isa sa mga paniniwala ng mga Hindu na kung saan kung ano ang ipinakitang kabutihan sa kapwa ay tatanawin ito bilang isang gantimpala. Ayon sa paniniwalang Hindu sa kanilang diyos na si Brahma na impersonal na Diyos maaari siya ay magbalat-kayo sa katauhan ng isang tao. Kaya ang mga Indiano ay mababait sapagkat itinuturing nila ang tao na isang diyos na magbabalik sa kanilang ng kabutihan hindi man ngayong araw kundi sa hinaharap.",
+        "Ang karma ay isa sa mga paniniwala ng mga Hindu na kung saan kung ano ang ipinakitang kabutihan sa kapwa ay tatanawin ito bilang isang gantimpala. Ayon sa paniniwalang Hindu sa kanilang diyos na si Brahma na impersonal na Diyos maaari siya ay magbalat-kayo sa katauhan ng isang tao. Kaya ang mga Indiano ay mababait sapagkat itinuturing nila ang tao na isang diyos na magbabalik sa kanilang ng kabutihan hindi man ngayong araw kundi sa hinaharap. Ang karma rin ang nagpapakita ng kasamaang anyo kagaya sa epiko sapagkat ang pagpaslang ni Ravana sa agila ang siyang nagdulot ng pagbalik ng kaniyang karma na buhay niya ang naging kapalit nito. Hindi lamang sa agila nagtatapos ang pinakadahilan nito sapagkat dinukot din niya ang buhay ni Sita na nagdala ng takot at pagkalungkot sa buhay nito. Sa mga Hindu mahalaga ang buhay ng isang tao o hayop. Pakatatandaan natin karma ay mangyaring positibo o negatibo ang maibabalik sa iyo depende kung gaano katindi ang iyong ipinakita sa iyong kapwa.",
     },
     {
       imageUrl: "/five/9.png",
