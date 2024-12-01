@@ -23,7 +23,7 @@ export default function AnswerCard({ data, className }: Props) {
   const { openModal, ModalComponent } = useModal(
     "success",
     "Tumpak!",
-    "Pinduton ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
+    "Pindutin ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
     "Magpatuloy",
     data.explanation,
     nextRound,
