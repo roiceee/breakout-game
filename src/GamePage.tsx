@@ -1,17 +1,19 @@
 import { Gamepad, Lightbulb, TimerReset, Trophy } from "lucide-react";
-import { useCallback, useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import RoundPage from "./components/RoundPage";
 import HintContext from "./context/hint-context";
 import RoundContext from "./context/round-context";
 import TimerContext from "./context/timer-context";
 import useModal from "./hooks/useModal";
 import { convertSecondsToSecondsMinutes } from "./utils/timer";
+import { Carousel } from "nuka-carousel";
 
 export default function GamePage() {
   const { rounds, currentRound, setCurrentRound, roundsData } =
     useContext(RoundContext);
   const { hints } = useContext(HintContext);
   const { startTimer, secondsRemaining, stopTimer } = useContext(TimerContext);
+  const [isReadyButtonEnabled, setIsReadyButtonEnabled] = useState(false);
 
   const { openModal: openGameOverModal, ModalComponent } = useModal(
     "error",
@@ -55,43 +57,69 @@ export default function GamePage() {
         <div className="card bg-base-100 border-primary border-2 min-w-[300px] max-w-[1000px] mx-auto md:absolute md:start-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           <div className="card-body">
             <h2 className="card-title mx-auto">{roundsData.title}</h2>
-
-            {/* Greetings */}
+            {/* 
+            Greetings
             <div className="mt-4">
               <p>{roundsData.greetings}</p>
             </div>
 
             {/* Objective */}
-            <div className="mt-4">
-              <h3 className="font-bold text-lg">Layunin:</h3>
-              <p>{roundsData.objective}</p>
-            </div>
+            {/* <div className="mt-4"> */}
+            {/* <h3 className="font-bold text-lg">Layunin:</h3> */}
+            {/* <p>{roundsData.objective}</p> */}
+            {/* </div> */}
 
-            <div className="mt-4">
-              <h3 className="font-bold text-lg">Panuto:</h3>
-              <p>{roundsData.description}</p>
-            </div>
+            {/* <div className="mt-4"> */}
+            {/* <h3 className="font-bold text-lg">Panuto:</h3> */}
+            {/* <p>{roundsData.description}</p> */}
+            {/* </div> */}
 
             {/* Instructions */}
-            <ul className="px-5 mt-4">
-              <li className="font-bold list-disc">Mayroon kang 3 hints</li>
-              <li className="list-disc">
-                Kung maubos ang oras ay hindi na maaaring magpatuloy pa
-              </li>
-              <li className="list-disc">
-                Magsisimula ang laro pag pinindot mo ang{" "}
-                <span className="font-bold">"Handa kana ba"</span>
-              </li>
-            </ul>
+            {/* <ul className="px-5 mt-4"> */}
+            {/* <li className="font-bold list-disc">Mayroon kang 3 hints</li> */}
+            {/* <li className="list-disc"> */}
+            {/* Kung maubos ang oras ay hindi na maaaring magpatuloy pa */}
+            {/* </li> */}
+            {/* <li className="list-disc"> */}
+            {/* Magsisimula ang laro pag pinindot mo ang{" "} */}
+            {/* <span className="font-bold">"Handa kana ba"</span> */}
+            {/* </li> */}
+            {/* </ul> */}
+
+            <div>
+              <Carousel
+                autoplay
+                showArrows
+                showDots
+                className="border-8 border-pink-500 border-solid mx-auto w-[600px]"
+                afterSlide={(endslideIndex) => {
+                  if (roundsData.ins.length - 1 === endslideIndex) {
+                    setIsReadyButtonEnabled(true);
+                  }
+                }}
+              >
+                <>
+                  {roundsData.ins.map((ins) => (
+                    <img src={ins} />
+                  ))}
+                </>
+              </Carousel>
+            </div>
 
             {/* Action Button */}
             <div className="card-actions justify-center">
-              <button
-                className="btn btn-primary btn-wide text-lg mt-4"
-                onClick={play}
-              >
-                Handa na ako
-              </button>
+              <div className="flex flex-col items-center">
+                <div className="text-sm">
+                  Tapusin ang slideshow para magpatuloy
+                </div>
+                <button
+                  className="btn btn-primary btn-wide text-lg mt-4"
+                  onClick={play}
+                  disabled={!isReadyButtonEnabled}
+                >
+                  Handa na ako
+                </button>
+              </div>
             </div>
 
             {/* Video Link */}

@@ -25,7 +25,7 @@ export default function AnswerCard({ data, className }: Props) {
     "Tumpak!",
     "Pindutin ang button sa baba para magpatuloy. Tumatakbo pa ang oras!",
     "Magpatuloy",
-    data.explanation,
+    data.expImage,
     nextRound
   );
 

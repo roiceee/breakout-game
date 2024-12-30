@@ -55,7 +55,7 @@ function useModal(
   const ModalComponent = (
     <>
       {isOpen && (
-        <dialog id="my_modal_1" className="modal" open>
+        <dialog id="my_modal_1" className="modal w-fit mx-auto" open>
           <div
             className={`modal-box max-w-[1000px] border-4 ${
               type === "primary"
@@ -72,7 +72,7 @@ function useModal(
             <h3 className="font-bold text-lg">{modalContent.title}</h3>
             {explanation && (
               <div>
-                <p className="font-bold">Pagpapaliwanag:</p> <p>{explanation}</p>
+               <img src={explanation} alt="story image" className="h-[400px] w-auto mx-auto"/> 
               </div>
             )}
             <p className="py-4 font-bold">{modalContent.message}</p>

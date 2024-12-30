@@ -12,6 +12,7 @@ interface RoundType {
   answer: string | number | "a" | "b" | "c" | "d" | Array<string>;
   title: string;
   explanation: string;
+  expImage: string;
 }
 
 interface BreakoutType {
@@ -21,6 +22,7 @@ interface BreakoutType {
   greetings: string;
   objective: string
   rounds: RoundType[];
+  ins: string[]
 }
 
 export type { RoundType, BreakoutType };

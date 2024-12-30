@@ -29,6 +29,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 1",
       explanation:
         "Isang masining na anyo ng panitikan na may isang kakintalan. Ang paglalarawan at paglalahad dito ay madali, maikli at masining kaya’t sa isang upuan o sa sandaliang panahon lamang ay agad itong matutunghayan, mababasa at kapupulutan ng pananabik, aliw, at maging aral.",
+      expImage: "/explanation/four/1.png",
     },
     {
       imageUrl: "/four/2.png",
@@ -40,6 +41,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 2",
       explanation:
         "Makikita ang pakikipagtunggali sa mga suliraning kakaharapin ng pangunahing tauhan.",
+      expImage: "/explanation/four/2.png",
     },
     {
       imageUrl: "/four/3.png",
@@ -51,6 +53,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 3",
       explanation:
         "Sa tunay na buhay ang tao kapag nasilaw sa salapi o pera ay nagbabago ang ugali nito na maaaring sa kasamaan o kabutian. Ayon nga kay Joe Jackson, “It’s all about the Money.” Kung walang pera ay wala kang magagawa upang matigil ang pang-aalipusta. Kagaya ng ginawa ni Keloglan na ang paggawad ng pera sa dalawang lalaki ay napatigil nito ang pananakit sa kaawa-awang pusa.",
+      expImage: "/explanation/four/3.png",
     },
     {
       imageUrl: "/four/4.png",
@@ -62,6 +65,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 4",
       explanation:
         "Hindi aakalain ng ina ni Keloglan ang mga hayop ay magiging dahilan upang maibalik sa kaniya ang mahiwagang selyo. Sa tunay na buhay, ang panghuhusga ay hindi makatarungan sapagkat pinagbatayan ang kanilang natatanging kakayahan bilang hayop subalit pinatutunayan ng mga hayop na hindi lamang sila hayop lamang kundi sila rin ay mahiwaga at maykapangyarihan na tulungan ang kanilang amo batay sa kung ano ang kanilang mayroon sila. Kaya nararapat na hindi natin husgahan ang tao batay sa panlabas na anyo.",
+      expImage: "/explanation/four/4.png",
     },
     {
       imageUrl: "/four/5.png",
@@ -73,6 +77,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 5",
       explanation:
         "Bilang isang magulang lalo na kung mayroong anak na babae ay nanaisin nitong mapunta ang kaniyang dalaga sa mabuting kamay. Batay sa kuwento, ang Emperor ay mayroong pinakamamahal na anak na babae kaya sa mga kalalakihang ninanais na makuha ang kamay ng kaniyang anak ay dadaan muna sa kinakailangan kasunduan upang makamit ito. Sa tunay na buhay, ipinapakita nito na ang lalaki ay nararapat na ibigay ang mga kakailanganin ng kaniyang magiging kabiyak noong siya ay nasa poder pa ng kaniyang mga magulang. Walang magulang ang gustong mapunta ang anak sa isang sitwasyon na iba sa kaniyang kinalakihan.",
+      expImage: "/explanation/four/5.png",
     },
     {
       imageUrl: "/four/6.png",
@@ -84,6 +89,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 6",
       explanation:
         "Natural lamang ang naging aksyon ng Emperor sa ginawa niya kay Keloglan sapagkat iginawad nito ang kapakanan ng kaniyang anak sa kaniya ngunit nang mawala ang palasyo ay papaano na lamang bubuhayin ni Keloglan ang kaniyang asawa. Sa buhay ng tao hindi sapat ang paghingi ng kapatawaran o sabihin man ito kung nasira ang pangako kung kaya ipinapakita natin ang aksyon na dapat nating gawin upang maitama at upang ang mga taong nakapaligid sa atin ay makikita ang paghihirap na baguhin o tuparin muli ang pangakong nabali.",
+      expImage: "/explanation/four/6.png",
     },
     {
       imageUrl: "/four/7.png",
@@ -95,6 +101,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 7",
       explanation:
         "Isang uri ng pag-aaral ng pag-unlad ng wika sa pamamagitan ng paghagilap ng mga pinagmulang pagpapakahulugan ng salita. Nagmula ang salitang etimolohiya sa Kastilang salita na etumologia na ang ibig sabihin ay may ibig-sabihin o may kahulugan.",
+      expImage: "/explanation/four/7.png",
     },
     {
       imageUrl: "/four/8.png",
@@ -106,6 +113,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 8",
       explanation:
         "Ang isang salita ibig sabihin maaaring nag-ugat ang salita mula sa iba pang salita na nagbago ang anyo.",
+      expImage: "/explanation/four/8.png",
     },
     {
       imageUrl: "/four/9.png",
@@ -117,6 +125,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 9",
       explanation:
         "Ang salitang “como estas” ay mula sa salitang Kastila na ibig sabihin nangangamusta, nagdaan ang ilang taon unti-unting nagbabago ang salitang ito hanggang sa nagkaroon ng salita sa Filipino na “kumusta”.",
+      expImage: "/explanation/four/9.png",
     },
     {
       imageUrl: "/four/10.png",
@@ -128,6 +137,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 10",
       explanation:
         "Ang salitang pusong-bato ay pinagsamang salita na puso na may kahulugan damdamin o kaya naman bahagi ng katawan at bato naman na isang matigas na bagay na makikita sa lupa. Kapag pinagsama ang dalawa, makabubuo nang salita pusong-bato na nangangahulugang 'matigas na damdamin'.",
+      expImage: "/explanation/four/10.png",
     },
     {
       imageUrl: "/four/11.png",
@@ -138,6 +148,7 @@ const breakoutFour: BreakoutType = {
       title: "Antas 11",
       explanation:
         "Ang wika ay dinamiko at hindi ito tumitigil sa isang punto lamang. Kung kaya't, mahalaga na malaman natin ang pinagmulan ng mga salita upang mas malinaw nating maunawaan kung paano ito ginamit noon at paano natin ito ginagamit sa kasalukuyan",
+      expImage: "/explanation/four/11.png",
     },
     {
       imageUrl: "/four/12.png",
@@ -150,7 +161,16 @@ const breakoutFour: BreakoutType = {
       title: "Konklusyon",
       explanation:
         "Sa buhay may mga rason kung bakit nagagalit at pinapangaralan ang tao. May puno’t dulo ang isang bagay mula sa kanilang karanasan marahil ito ang naging salik sa kanilang pagbabago. Ayon kay Heraclitus “Ang katangi-tanging pagkakatulad sa buhay ay ang pagbabago.” Kung kaya kung hindi nagbabago ang isang tao ay hindi siya umuunlad dahil kaakibat ng pagiging tao ay ang magbago kagaya ni Keloglan na nagbago kung saan noong una ay pinapahalagahan ang gintong barya upang mabili ang mga pagkain at damit ng kaniyang ina ay handang bitawan ang pangangailangan niya sapagkat nanaig ang awa sa mga hayop, ang ina niyang galit at mapanghusga sa ginawa ni Keloglan na ipinambayad sa mga taong nanakit sa hayop ay natutong humanga sa katapatan ng kaniyang mga hayop, at ang Emperor na strikto at mayroong palugit sa nagnanais na mapaibig ang kaniyang anak ay natuto na igawad ito ay Keloglan dahil sa pagtupad nito sa kaniyang kahilingang pagpapatayo ng kastilyo sa tabi ng kaniyang kastilyo. Hindi rin mawawala ang pagbawi nito sa kapakanan ni Keloglan sapagkat sinira ng matanda ang kastilyo subalit nang maitayo muli ay ibinalik din niya ang kaniyang dalaga ky Keloglan. Marami mang nagbago nangyari sa buhay ni Keloglan nang dumating ang mahiwagang selyo sa kaniyang buhay subalit may iisang pag-uugali ang hindi nawala--- ang hindi paghusga sa kakayahan ng mga hayop na kunin ang mahiwagang selyo mula sa matanda at pagiging matatag sa panahon ng pagsubok.",
+      expImage: "/explanation/four/12.png",
     },
+  ],
+
+  ins: [
+    "/instructions/three/1.png",
+    "/instructions/three/2.png",
+    "/instructions/three/3.png",
+    "/instructions/three/4.png",
+    "/instructions/three/5.png",
   ],
 };
 
