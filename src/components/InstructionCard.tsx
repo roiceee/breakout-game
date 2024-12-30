@@ -16,7 +16,7 @@ export default function InstructionCard({ data, className }: Props) {
         <RoundDisplayCard className="m-2 w-fit" />
         <h2 className="card-title my-2">{data.title}</h2>
 
-        <p className="text-xl">
+        <div className="text-xl">
           {/* accept html tags */}
 
           <div
@@ -24,7 +24,7 @@ export default function InstructionCard({ data, className }: Props) {
               __html: data.instruction
             }}
           ></div>
-        </p>
+        </div>
       </div>
     </div>
   );

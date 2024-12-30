@@ -99,8 +99,8 @@ export default function GamePage() {
                 }}
               >
                 <>
-                  {roundsData.ins.map((ins) => (
-                    <img src={ins} />
+                  {roundsData.ins.map((ins, index) => (
+                    <img src={ins} key={`image-${index}`} />
                   ))}
                 </>
               </Carousel>
