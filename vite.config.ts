@@ -25,7 +25,13 @@ export default defineConfig({
         "two/*.png",
         "three/*.png",
         "four/*.png",
-        "five/*.png"
+        "five/*.png",
+        "explanation/five/*.png",
+        "explanation/four/*.png",
+        "explanation/three/*.png",
+        "instructions/five/*.png",
+        "instructions/four/*.png",
+        "instructions/three/*.png",
       ],
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,mp3,ttf,webp,jpeg,jpg}"],

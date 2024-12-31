@@ -72,7 +72,7 @@ function useModal(
             <h3 className="font-bold text-lg">{modalContent.title}</h3>
             {explanation && (
               <div>
-               <img src={explanation} alt="story image" className="h-[400px] w-auto mx-auto"/> 
+               <img src={explanation} alt="story image" className="h-[00px] w-auto mx-auto"/> 
               </div>
             )}
             <p className="py-4 font-bold">{modalContent.message}</p>
