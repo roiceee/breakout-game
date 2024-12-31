@@ -18,6 +18,7 @@ const RoundContext = createContext<{
     greetings: "",
     objective: "",
     description: "",
+    ins: [],
   },
   setRoundsData: () => {},
   nextRound: () => {},

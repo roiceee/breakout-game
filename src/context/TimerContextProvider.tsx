@@ -1,13 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import TimerContext from "./timer-context";
 
+const seconds = 45 * 60;
+
 export default function TimerContextProvider({
   children,
 }: {
   children: React.ReactNode
 }) {
-  // Default time is 10 minutes (600 seconds)
- const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
+
+ const [secondsRemaining, setSecondsRemaining] = useState(seconds);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const setTime = (seconds: number) => {
@@ -35,9 +37,8 @@ export default function TimerContextProvider({
   }, []);
 
   const resetTimer = useCallback(() => {
-    // Stop the timer and reset the seconds to default (600 seconds)
     stopTimer();
-    setSecondsRemaining(600);
+    setSecondsRemaining(seconds);
   }, [stopTimer]);
 
   useEffect(() => {
