@@ -17,6 +17,8 @@ export default function RoundContextProvider({
     greetings: "",
     objective: "",
     videoUrl: "",
+
+    ins: [],
   });
   const [currentRound, setCurrentRound] = useState(0);
 
