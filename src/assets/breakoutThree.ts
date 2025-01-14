@@ -31,8 +31,7 @@ const breakoutThree: BreakoutType = {
       imageUrl: "/three/2.png",
       instruction:
         "Hinuhubog ng parabula ang _________ at __________ na pagkatao ng isang tagapakinig.",
-      hintText:
-        "Pagbabago ng tao sa panloob at panlabas.",
+      hintText: "Pagbabago ng tao sa panloob at panlabas.",
       roundType: "word",
       answer: "moral at espiritwal",
       title: "Antas 2",
@@ -64,7 +63,7 @@ const breakoutThree: BreakoutType = {
         "Ang magandang kaisipan o aral ang nagpapatingkad sa parabula sapagkat ninanais ni Hesus na mayroong matutuhan ang kaniyang mga tagapakinig sa mga pangyayaring nagaganap sa buhay ng isang tao. Sa aral na ibinigay ay nagdadala ito ng pagbabago sa kanilang mga nakaraang aksyon at pag-iisip sa kanilang buhay na kinakailangang maituwid upang ang kanilang buhay ay maliligtas sa kasalanan ng mundo.",
       expImage: "/explanation/three/4.png",
     },
-      
+
     {
       imageUrl: "/three/5.png",
       instruction:
@@ -75,7 +74,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 5",
       explanation:
         "Inihahambing sa teksto ang pagkakaiba ng banga sa lipi o pangkat ng tao sa mundo. Ang mga puti ay tinutukoy nito ang mga magandang buhay, may itim at tsokalate ay ang mga nagtatrabahong bilad sa araw, ang mga dilaw ay ang mga nasa may kaya sa buhay. Inihahambing nito ang pagkakaiba ng tao batay sa ating kulay ng balat, gampanin sa lipunan, at ang pagkakilanlan sa lipunan.",
-        expImage: "/explanation/three/5.png",
+      expImage: "/explanation/three/5.png",
     },
     {
       imageUrl: "/three/6.png",
@@ -87,7 +86,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 6",
       explanation:
         "Marami ang nawawala sa landas ng kanilang buhay at nakakalimutan ang kanilang pinagmulan dahil sa mga nangyayaring pagbabago sa buhay ng tao na nakapagdudulot ng kapahamakan sa kanilang sarili. Pinatutunayan lamang ng paalala ng inang banga sa ating buhay na kahit saan man mapadpad sa buhay ay huwag kalilimutan at talikuran ang pinagmulan natin sa ating buhay.",
-        expImage: "/explanation/three/6.png",
+      expImage: "/explanation/three/6.png",
     },
     {
       imageUrl: "/three/7.png",
@@ -99,7 +98,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 7",
       explanation:
         "Magkakaiba-iba ang buhay ng tao sa lipunan, kagaya ng pagkakakaiba-iba ng mga banga sa parabula kaya huwag mong papakialaman ang kanilang buhay, sa halip ituon mo ito lamang sa iyong sarili.",
-        expImage: "/explanation/three/7.png",
+      expImage: "/explanation/three/7.png",
     },
     {
       imageUrl: "/three/8.png",
@@ -111,7 +110,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 8",
       explanation:
         "Sa parabula, ang anak na banga ay hindi pa kailanman nakaliligo sa lawa subalit gusto niyang maranasan ang buhay ng ibang banga kahit na ito ay may kaakibat na panganib.",
-        expImage: "/explanation/three/8.png",
+      expImage: "/explanation/three/8.png",
     },
     {
       imageUrl: "/three/9.png",
@@ -124,7 +123,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 9",
       explanation:
         "Unti-unting lumubog ang anak na banga sa lawa dahil sa pagsuway nito sa utos ng kaniyang ina. Alam ng ating mga ina kung ano ang ikabubuti ng kanilang mga anak para sa kanila sapagkat alam na nila ang mangyayari rito. Ang inang banga bilang Poong Maykapal ay nagbibigay ng paalala sa ating buhay upang hindi tayo mapahamak subalit tayo bilang anak na banga o anak ng Diyos ay minsang sumusuway na nagdudulot ng kapahamakan na minsan ito ang magdadala ng aral at minsan kamatayan sa hindi pagsunod nito na siyang pagsisi sa huli.",
-        expImage: "/explanation/three/9.png",
+      expImage: "/explanation/three/9.png",
     },
     {
       imageUrl: "/three/10.png",
@@ -136,7 +135,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 10",
       explanation:
         "Sa paraaang pagluluto sapagkat sila ay magsasaka at ito ang kanilang kabuhayan. Ginamit ang mga pagkain sa paligid upang ipakita ang mensahe ng pagsubok sa buhay.",
-        expImage: "/explanation/three/10.png",
+      expImage: "/explanation/three/10.png",
     },
     {
       imageUrl: "/three/11.png",
@@ -148,7 +147,7 @@ const breakoutThree: BreakoutType = {
       title: "Antas 11",
       explanation:
         "Ang carrot, itlog, at butil ng kape ay sumisimbolo sa iba't ibang paraan ng pagharap sa mga pagsubok. Ang carrot ay nanghihina, ang itlog ay tumitigas, at ang butil ng kape ay nagiging mas mabuti.",
-        expImage: "/explanation/three/11.png",
+      expImage: "/explanation/three/11.png",
     },
     {
       imageUrl: "/three/12.png",
@@ -161,12 +160,17 @@ const breakoutThree: BreakoutType = {
       title: "Konklusyon",
       explanation:
         "Ang pagtangkilik sa mensahe ng Diyos ay nagdadala ng karunungan sa buhay ng tao, nagpapalawak sa kritikal na pag-iisip, at nagbibigay ng lakas sa ispiritwal na aspeto ng pamumuhay.",
-        expImage: "/explanation/three/12.png",
+      expImage: "/explanation/three/12.png",
     },
   ],
   ins: [
-    "/instructions/three/1.png", "/instructions/three/2.png", "/instructions/three/3.png", "/instructions/three/4.png", "/instructions/three/5.png"
-  ]
+    "/instructions/three/1.png",
+    "/instructions/three/2.png",
+    "/instructions/three/3.png",
+    "/instructions/three/4.png",
+    "/instructions/three/5.png",
+    "/instructions/three/6.png",
+  ],
 };
 
 export default breakoutThree;

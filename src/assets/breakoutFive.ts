@@ -140,11 +140,11 @@ const breakoutFive: BreakoutType = {
     },
   ],
   ins: [
-    "/instructions/three/1.png",
-    "/instructions/three/2.png",
-    "/instructions/three/3.png",
-    "/instructions/three/4.png",
-    "/instructions/three/5.png",
+    "/instructions/five/1.png",
+    "/instructions/five/2.png",
+    "/instructions/five/3.png",
+    "/instructions/five/4.png",
+    "/instructions/five/5.png",
   ],
 };
 

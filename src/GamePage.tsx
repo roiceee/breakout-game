@@ -91,7 +91,7 @@ export default function GamePage() {
                 autoplay
                 showArrows
                 showDots
-                className="border-8 border-pink-500 border-solid mx-auto w-[600px]"
+                className="border-8 border-pink-500 border-solid mx-auto w-[700px]"
                 afterSlide={(endslideIndex) => {
                   if (roundsData.ins.length - 1 === endslideIndex) {
                     setIsReadyButtonEnabled(true);

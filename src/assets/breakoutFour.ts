@@ -166,11 +166,11 @@ const breakoutFour: BreakoutType = {
   ],
 
   ins: [
-    "/instructions/three/1.png",
-    "/instructions/three/2.png",
-    "/instructions/three/3.png",
-    "/instructions/three/4.png",
-    "/instructions/three/5.png",
+    "/instructions/four/1.png",
+    "/instructions/four/2.png",
+    "/instructions/four/3.png",
+    "/instructions/four/4.png",
+    "/instructions/four/5.png",
   ],
 };
 
