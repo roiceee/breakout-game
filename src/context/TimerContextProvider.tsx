@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import TimerContext from "./timer-context";
 
-const seconds = 45 * 60;
+// This is the initial time in seconds
+const seconds = 60 * 60;
 
 export default function TimerContextProvider({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
- const [secondsRemaining, setSecondsRemaining] = useState(seconds);
+  const [secondsRemaining, setSecondsRemaining] = useState(seconds);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const setTime = (seconds: number) => {
@@ -54,7 +54,6 @@ export default function TimerContextProvider({
       stopTimer();
     };
   }, [stopTimer]);
-
 
   return (
     <TimerContext.Provider
