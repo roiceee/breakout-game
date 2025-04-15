@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Breakout Game  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview  
+**Breakout Game** is an educational game designed for Filipino high school students, commissioned by education researchers. The game challenges players to complete tracks within a set time limit. If time runs out, they must restart the game.  
 
-Currently, two official plugins are available:
+This is a fully client-side **PWA** that works offline.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack  
+- **Frontend:** React (Vite) + TypeScript  
+- **UI:** DaisyUI (Tailwind CSS)  
+- **PWA:** Vite PWA Plugin  
+- **Deployment:** Cloudflare  
 
-## Expanding the ESLint configuration
+## Features  
+- Multiple game themes to choose from.  
+- Timed tracks: Players must complete each track before the timer runs out.  
+- Fully offline support with **PWA** capabilities.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup & Installation  
+1. Clone the repository:  
+   ```sh
+   git clone <repo-url>
+   cd breakout-game
+   ```  
+2. Install dependencies:  
+   ```sh
+   npm install  # or pnpm install
+   ```  
+3. Run the development server:  
+   ```sh
+   npm run dev
+   ```  
+   Open [http://localhost:5173](http://localhost:5173) in your browser.  
 
-- Configure the top-level `parserOptions` property like this:
+## Deployment  
+- Deployed via **Cloudflare Pages**.  
+- Built as a **fully client-side PWA** for offline access.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage  
+1. Choose a **game theme**.  
+2. Complete the track within the given time.  
+3. If time runs out, restart and try again.  
+4. The game supports offline play after the first load.  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Troubleshooting  
+- Ensure the game loads correctly as a **PWA** in your browser.  
+- If deployment issues arise, check Cloudflare logs.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Maintainer  
+This project is currently maintained by **[John Roice Aldeza](https://github.com/roiceee)**.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+Let me know if you need adjustments! 🚀
