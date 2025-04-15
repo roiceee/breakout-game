@@ -7,9 +7,18 @@ interface Props {
   className?: string;
   onSubmit?: (answer: any, correctAnswer: string[]) => boolean;
   type?: "word" | "number";
+  showImage: () => void;
+  hideImage: () => void;
+  isImageShow?: boolean;
 }
 
-export default function InstructionCard({ data, className }: Props) {
+export default function InstructionCard({
+  data,
+  className,
+  showImage,
+  hideImage,
+  isImageShow,
+}: Props) {
   return (
     <div className={`card p-1 ${className}`}>
       <div className="card-body p-3">
@@ -21,9 +30,23 @@ export default function InstructionCard({ data, className }: Props) {
 
           <div
             dangerouslySetInnerHTML={{
-              __html: data.instruction
+              __html: data.instruction,
             }}
           ></div>
+          <div className="mt-4">
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                if (isImageShow) {
+                  hideImage();
+                } else {
+                  showImage();
+                }
+              }}
+            >
+              {isImageShow ? "Itago" : "Ipakita"} ang imahe
+            </button>
+          </div>
         </div>
       </div>
     </div>
