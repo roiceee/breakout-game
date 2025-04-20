@@ -46,7 +46,7 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/3.png",
       instruction:
-        "Anong sanhi ng pagbabago ng kalalakihan batay sa teksto nasa ibaba, Lumapit si Keloglan sa mga kalalakihan at mahinahong sinabi “Maari po bang itigil ang panunukso sa kaawa-awang pusa at kung titigil kayo, bibigyan ko kayo ng isang gintong barya.” Pumayag ang mga kalalakihan at inabot ang isang gintong barya.",
+        "Anong sanhi ng pagbabago ng kalalakihan na kung saan ibinigay ni Keloglan ang isang gintong barya kapalit ng buhay ng pusa?",
       hintText: "Paggawad ng gintong barya",
       roundType: "word",
       answer: "PAGBABAGO DAHIL SA SALAPI",
@@ -58,7 +58,7 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/4.png",
       instruction:
-        "Anong sanhi ng pagbabago ng ina ni Keloglan at Emperor batay sa teksto nasa ibaba, Nang malaman ito ng kaniyang ina nagalit ito at sinabing hindi siya matutulungan ng aso at pusa. Hanggang sa naging, Ang ina at ang Emperor ay nagulat sa kabutihang asal ng mga hayop sa kanilang panginoon.",
+        "Anong pag-uugaling pagbabago ng ina ni Keloglan nang sa simula ay pinagpalit niya ang mga gintong barya para sa kaligtasan ng mga hayop pero sa huli ay namangha ito dahil sa katapatan nila?",
       hintText: "Pagbabalik ng utang na loob ng mga hayop kay Keloglan",
       roundType: "word",
       answer: "PAGHANGA SA KATAPATAN",
@@ -70,7 +70,7 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/5.png",
       instruction:
-        "Anong sanhi ng pagbabago ng Emperor batay sa teksto: <b>Mula sa pangyayaring, Kung nais mong pakasalan ang aking anak, kailangan mo munang magpatayo ng isang palasyo sa tabi ng aking palasyo. Hanggang sa naging, Nang makita ng Emperor ang isang magandang palasyo, sumang-ayon siya at ikinasal siya sa prinsesa sa mismong araw na iyon.</b>",
+        "Ano ang gustong pag-uugali ng Emperor na nais ipakita ni Keloglan upang ipakita ang kaginhawaan sa magiging buhay ng kaniyang dalaga?",
       hintText: "Pagtupad sa kahilingan nito.",
       roundType: "word",
       answer: "PAGSANG-AYON SA KASUNDUAN",
@@ -82,7 +82,7 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/6.png",
       instruction:
-        "Anong sanhi ng pagbabago ng Emperor batay sa teksto, <p><b>Mula sa pangyayaring, Nang makita ng Emperor na ang palasyo ay nawala, binawi niya ang kaniyang anak na babae at nangako na hindi ito makakasama ng kaniyang asawa kung hindi niya ito mabibigyan ng magandang buhay.</b></p> Hanggang sa naging, <p><b>Nang makita ang pagbalik ng palasyo, sumang-ayon ang Emperor na ang kaniyang anak na babae ay maaaring muling manirahan kasama si Keloglan.</b></p>",
+        "Bakit nagbago ang pag-uugali ng Emperor noong nasira ang palasyo ni Keloglan subalit ipinatayo ulit ito ni Keloglan?",
       hintText: "Pagbalik ng palasyo",
       roundType: "word",
       answer: "PAGTUPAD MULI SA PANGAKO",
@@ -94,7 +94,7 @@ const breakoutFour: BreakoutType = {
     {
       imageUrl: "/four/7.png",
       instruction:
-        "Ang lahat ay mayroong pinagmulan, na maging salita na ating ginagamit sa pang-araw-araw na pakikipagtalastasan.",
+        "Pag-aaral ng mga pinagmulan ng salita.",
       hintText: "Pag-aaral ng kasaysayan ng salita.",
       roundType: "word",
       answer: "ETIMOLOHIYA",

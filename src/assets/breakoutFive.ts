@@ -18,7 +18,7 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/1.png",
       instruction:
-        "Ito ay panitikang nagsasaad sa tulang pasalaysay na nagsasaad ng kabayanihan ng panguhaning tauhan na nagtataglay na katangiang higit pa sa karaniwang tao.",
+        "Isang tulang pasalaysay. Katulad lamang ng maikling kuwento subalit ang mga tauhan ay nagtataglay ng kapangyarihan at kagila-gilas na pangyayari.",
       hintText: "Kuwento ng mga bayani na may kapangyarihan.",
       roundType: "word",
       answer: "EPIKO",
@@ -30,7 +30,7 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/2.png",
       instruction:
-        "Siya ay si Surpanaka, ang kapatid ni Ravana, na hari ng mga higante at demonyo. “Gusto kitang magingasawa”, sabi nito kay Rama. “Hindi maaari” sabi ni Rama, “May asawa na ako” Batay sa teksto, ito ay nagsasaad ng pagpapakita ng pagpili sa moralidad ng mga taga-India. Ano ang tawag nito?",
+        "Ano ang ipinakitang pag-uugali ni Sita noong tumanggi siya sa alok na pagpapakasal niya kay Suparnaka.",
       hintText: "Pagmamahal ng isang tao lamang dahil sila ay kasal na.",
       roundType: "word",
       answer: "PAGIGING TAPAT SA KABIYAK",
@@ -42,7 +42,7 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/3.png",
       instruction:
-        "Ang pagiging tapat ni Rama sa kaniyang kabiyak na si Sita ay nagpapakita ito ng kabanalan sa kanilang buhay at tunay na pamumuhay bilang mag-asawa. Ang pagiging tapat sa kabiyak ay isang kosmiko na pinagbabatayang pag-uugali. Ito ay tamang pag-uugali na dapat taglayin ng lipunan.",
+        "Ang pagiging tapat sa kabiyak ay isang kosmiko na pinagbabatayang tamang pag-uugali dapat sa lipunan.",
       hintText:
         "Nag-ugat ito sa wikang Sanskrit at ginamit sa paglipas ng mga siglo sa iba't ibang pilosopikal at relihiyosong tradisyon.",
       roundType: "word",
@@ -55,7 +55,7 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/4.png",
       instruction:
-        "May galing si Maritsa na mabago ang sarili sa kahit anong anyoat hugis. Nang malaman ni Maritsa na sina Rama at Lakshamanan ang magkakalaban, tumanggi itong tumulong. “ Kakampi nila ang mga Diyos.”, Sabi ni Maritsa. Ano ang nag-udyok na pagtanggi ni Maritsa?",
+        "Bakit tumanggi si Maritsa sa plano ni Suparnaka na pabagsakin sina Rama at Lakshamanan?",
       hintText: "Pagdarasal ng tao bilang komunikasyon sa Poon.",
       roundType: "word",
       answer: "PANANAMPALATAYA SA DIYOS",
@@ -92,7 +92,7 @@ const breakoutFive: BreakoutType = {
     {
       imageUrl: "/five/7.png",
       instruction:
-        "Sinunog ng magkapatid ang bangkay ng Agila. Bakit mahalaga na sunugin ang bangkay ng Agila alinsunod sa kultural na aspeto ng India?",
+        "Bakit mahalaga na sunugin ang bangkay ng Agila alinsunod sa kultural na aspeto ng India?",
       hintText: "Ikalawang buhay sa ibang pagkakataon.",
       roundType: "word",
       answer: "REINCARNATION",

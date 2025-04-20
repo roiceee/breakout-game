@@ -18,7 +18,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/1.png",
       instruction:
-        "Sa parabula ang isang tao, bagay, o lugar ay ___________ sa iba ito ay upang mas maging malinaw ang ipaparating na mensahe.",
+        "Mas magiging malinaw sa mga mangmang at tagapakinig ni Hesus kung ___________ ang dalawa o higit pang bagay.",
       hintText: "Ang dalawang bagay ay kinokompara sa isa't isa.",
       roundType: "word",
       answer: "pinaghahambing",
@@ -42,7 +42,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/3.png",
       instruction:
-        "Ang parabula ay ipinaparating sa paraang ____________ na ginagamitan ng pagtutuklas sa nakatagong mensahe nito.",
+        "Ang parabula ay isang _____________ akda na kinakailangan suriin at unawain.",
       hintText: "Pagtatago ng mensahe",
       roundType: "word",
       answer: "PATALINGHAGA",
@@ -54,7 +54,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/4.png",
       instruction:
-        "Matatawag ang isang kuwento na parabula kung kapupulutan ito ng _____________ na siyang kikintal sa mga tagapakinig nito.",
+        "Ang parabula ay naglalaman ng _________________ kagaya ng ibang panitikan.",
       answer: "MAGANDANG KAISIPAN",
       hintText: "Ang pinakamahalagang ideya ng parabula.",
       roundType: "word",
@@ -79,7 +79,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/6.png",
       instruction:
-        "Ang nakatagong talinghaga na teksto ay maaaring mangyari sa tunay na buhay ng tao, ano ang nakatagong mensahe mula sa Parabula ng Banga? “Huwag mong kalilimutang ikaw ay isang bangang gawa sa lupa,” ang tagubilin  ng  Inang Banga  sa kaniyang anak.",
+        "“Huwag mong kalilimutang ikaw ay isang bangang gawa sa lupa,” ang tagubilin  ng  Inang Banga  sa kaniyang anak.” Ano ang mensahe nito?",
       answer: "HUWAG KALILIMUTAN ANG PINAGMULAN",
       hintText: "Ang simula ng bagay-bagay sa buhay ng tao.",
       roundType: "word",
@@ -91,7 +91,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/7.png",
       instruction:
-        "Ang nakatagong talinghaga na teksto ay maaaring mangyari sa tunay na buhay ng tao, ano ang nakatagong mensahe mula sa Parabula ng Banga? “At ikaw ay nararapat na makisalamuha  lamang  sa ating  mga  kauring banga.”",
+        "“At ikaw ay nararapat na makisalamuha  lamang  sa ating  mga  kauri ng banga.” Ano ang ibig sabihin nito para sa kanyang anak na Banga?",
       answer: "HUWAG PAKIALAMAN ANG BUHAY NG IBA",
       hintText: "Anyo ng buhay ng tao.",
       roundType: "word",
@@ -103,7 +103,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/8.png",
       instruction:
-        "Ang nakatagong talinghaga na teksto ay maaaring mangyari sa tunay na buhay ng tao, ano ang nakatagong mensahe mula sa Parabula ng Banga? “Bakit  wala namang  masama  sa paliligo  sa  lawa kasamang  ibang  uring  banga.  Wala naman  kaming gagawing hindi tama,” bulong niya sa sarili.",
+        "“Bakit  wala namang  masama  sa paliligo  sa  lawa kasamang  ibang  uring  banga.  Wala naman  kaming gagawing hindi tama,” bulong niya sa sarili. At sumunod siya sa porselanang banga at sinabing, “Oo, maliligo ako sa lawa  kasama mo.  Ngunit  saglit lamang,  nais  ko lang  na mapreskuhan.” Ano ang ibig sabihin ng sinambit ng Anak na Banga?",
       answer: "PAGPILI SA MGA PANIBAGONG KARANASAN",
       hintText: "Gustong malaman ang hindi pa nararanasan sa kaniyang buhay.",
       roundType: "word",
@@ -115,7 +115,7 @@ const breakoutThree: BreakoutType = {
     {
       imageUrl: "/three/9.png",
       instruction:
-        "Ang nakatagong talinghaga na teksto ay maaaring mangyari sa tunay na buhay ng tao, ano ang nakatagong mensahe mula sa Parabula ng Banga? “Habang siya’y  nabibitak at  unti-unting lumulubog sa ilalalim ng tubig, naalaala ng bangang lupa ang kaniyang ina.”",
+        "“Habang siya’y  nabibitak at  unti-unting lumulubog sa ilalalim ng tubig, naalaala ng bangang lupa ang kaniyang ina.” Ano ang ibig sabihin ng Anak na Banga sa kaniyang pagkakalubog?",
       answer: "PAGSISI DAHIL SA PAGSUWAY",
       hintText:
         "Kahit kailanman ay ito hindi nauuna sa mga pangyayari sa buhay ng tao.",
